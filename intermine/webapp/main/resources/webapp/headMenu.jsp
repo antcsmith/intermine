@@ -35,12 +35,17 @@
     </div>
   </c:if>
   <div id="header">
-    <a href="${WEB_PROPERTIES['project.sitePrefix']}" alt="Home" rel="NOFOLLOW"><img id="logo" src="model/images/logo.png" width="45px" height="43px" alt="Logo" /></a>
+    <a href="${WEB_PROPERTIES['project.sitePrefix']}" alt="Home" rel="NOFOLLOW"><img id="logo" src="model/images/logo.png" width="157px" height="66px" alt="Logo" /></a>
     <h1><html:link href="${WEB_PROPERTIES['project.sitePrefix']}/"><c:out value="${WEB_PROPERTIES['project.title']}" escapeXml="false"/></html:link></h1>
     <p id="version"><fmt:message key="header.version"/> <c:out value="${WEB_PROPERTIES['project.releaseVersion']}" escapeXml="false"/></span>
-    <p><c:out value="${WEB_PROPERTIES['project.subTitle']}" escapeXml="false"/></p>
+    <!--ACS 15 NOV 16 <p><c:out value="${WEB_PROPERTIES['project.subTitle']}" escapeXml="false"/></p>-->
   </div>
-
+<!-- ACS 15 NOV 16-->
+<div id="header2">
+    <p> <c:out value="${WEB_PROPERTIES['project.subTitle']}"  escapeXml="false"/></p>
+    
+    </div>
+<!-- ACS 15 NOV 16 END -->
     <!-- Tab Menu -->
   <fmt:message key="${pageName}.tab" var="tab" />
   <div id="menucontainer">
@@ -77,6 +82,19 @@
           <fmt:message key="menu.dataCategories"/>
         </a>
       </li>
+<!-- ACS 15 NOV 16 -->
+      <li id="impi" <c:if test="${tab == 'impi'}">class="activelink"</c:if>>
+        <a href="/${WEB_PROPERTIES['webapp.path']}/impi.do">
+          <fmt:message key="menu.impi"/>
+        </a>
+      </li>
+      
+      <li id="mitocarta" <c:if test="${tab == 'mitocarta'}">class="activelink"</c:if>>
+        <a href="/${WEB_PROPERTIES['webapp.path']}/mitocarta.do">
+          <fmt:message key="menu.mitocarta"/>
+        </a>
+      </li>
+<!-- ACS 15 NOV 16 END -->
       <li id="api"  <c:if test="${tab == 'api'}">class="activelink"</c:if>>
         <a href="/${WEB_PROPERTIES['webapp.path']}/api.do">
           <fmt:message key="menu.api"/>

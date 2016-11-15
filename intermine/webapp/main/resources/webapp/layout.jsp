@@ -21,7 +21,7 @@
 
 <!-- for google webmaster -->
 <meta name="google-site-verification" content="${WEB_PROPERTIES['searchengines.google']}" />
-
+<link rel="shortcut icon" type="image/x-icon" href="model/images/favicon.ico">
 <!-- for yahoo -->
 <META name="y_key" content="${WEB_PROPERTIES['searchengines.yahoo']}" />
 
