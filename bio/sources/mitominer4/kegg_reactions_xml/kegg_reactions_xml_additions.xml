@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="ECNumber" is-interface="true">
+  <collection name="reactions" referenced-type="KeggReactions" reverse-reference="ec" ordered="true"/>
+</class>
+
+<class name="KeggReactions" is-interface="true">
+  <attribute name="reaction" type="java.lang.String"/>
+  <attribute name="reactionName" type="java.lang.String"/>
+  <attribute name="reactionDefinition" type="java.lang.String"/>
+  <attribute name="equation" type="java.lang.String"/>
+  <collection name="pathways" referenced-type="KeggPathways" reverse-reference="reactions" ordered="true"/>
+  <collection name="ec" referenced-type="ECNumber" reverse-reference="reactions" ordered="true"/>
+ </class>
+</classes>
+

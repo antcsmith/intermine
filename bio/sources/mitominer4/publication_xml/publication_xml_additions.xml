@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="Publication" is-interface="true">
+  <attribute name="evidenceType" type="java.lang.String"/>
+  <attribute name="correspondingAuthor" type="java.lang.String"/>
+ </class>
+</classes>

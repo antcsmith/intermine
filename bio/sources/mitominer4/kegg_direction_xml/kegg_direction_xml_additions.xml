@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="KeggReactions" is-interface="true">
+<attribute name="keggDirectionality" type="java.lang.String"/>
+<attribute name="keggDirectionalitySubstrate" type="java.lang.String"/>
+<attribute name="keggDirectionalityProduct" type="java.lang.String"/>
+</class>
+
+</classes>
+

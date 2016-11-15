@@ -1,0 +1,6 @@
+<project name="mitominer4-omim" default="default" basedir=".">
+  <description>build, test, package mitominer-omim</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

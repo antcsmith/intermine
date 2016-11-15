@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<classes>
+<class name="ProteinAtlasCancerExpression" is-interface="true">
+   <attribute name="identifier" type="java.lang.String"/>
+   <attribute name="tumour" type="java.lang.String"/>
+   <attribute name="strong" type="java.lang.Integer"/>
+   <attribute name="moderate" type="java.lang.Integer"/>
+   <attribute name="weak" type="java.lang.Integer"/>
+   <attribute name="negative" type="java.lang.Integer"/>
+   <attribute name="totalPatients" type="java.lang.Integer"/>
+   <attribute name="expressionType" type="java.lang.String"/>
+   <collection name="genes" referenced-type="Gene" reverse-reference="proteinAtlasCancerExpression"/>
+</class>
+
+<class name="Gene" is-interface="true">
+<collection name="proteinAtlasCancerExpression" referenced-type="ProteinAtlasCancerExpression" reverse-reference="genes" ordered="true"/>
+</class>
+
+</classes>

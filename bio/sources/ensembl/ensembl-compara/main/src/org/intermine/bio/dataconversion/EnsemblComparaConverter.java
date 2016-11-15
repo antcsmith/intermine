@@ -185,7 +185,7 @@ public class EnsemblComparaConverter extends BioFileConverter
             return null;
         }
         String newIdentifier = identifier;
-        if ("7227".equals(taxonId) || "9606".equals(taxonId)) {
+        if ("7227".equals(taxonId) || "0000".equals(taxonId)) {
             newIdentifier = resolveGene(taxonId, identifier);
             if (newIdentifier == null) {
                 return null;

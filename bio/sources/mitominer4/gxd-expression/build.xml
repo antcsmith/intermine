@@ -1,0 +1,6 @@
+<project name="gxd-expression" default="default" basedir=".">
+  <description>build, test, package gxd-expression</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

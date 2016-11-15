@@ -1,0 +1,6 @@
+<project name="kegg_compounds_xml" default="default" basedir=".">
+  <description>build, test, package kegg_compounds_xml</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

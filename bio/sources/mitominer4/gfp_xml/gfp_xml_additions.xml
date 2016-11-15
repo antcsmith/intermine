@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<classes>
+<class name="Gene" is-interface="true">
+   <attribute name="mitoEvidenceGFP" type="java.lang.Integer"/> 
+   <collection name="gfp" referenced-type="GFP" reverse-reference="genes"/>
+</class>
+
+<class name="Publication" is-interface="true">
+   <collection name="gfp" referenced-type="GFP" reverse-reference="publications"/>
+</class> 
+
+<class name="Organism" is-interface="true">
+  <collection name="gfp" referenced-type="GFP" reverse-reference="organisms" ordered="true"/>
+</class>
+
+<class name="GFP" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="originalIdentifier" type="java.lang.String"/>
+  <attribute name="experimentalDetails" type="java.lang.String"/>
+  <attribute name="tissue" type="java.lang.String"/>
+  <collection name="genes" referenced-type="Gene" reverse-reference="gfp"/>
+  <reference name="publications" referenced-type="Publication" reverse-reference="gfp" ordered="true"/>
+  <reference name="organisms" referenced-type="Organism" reverse-reference="gfp" ordered="true"/>
+</class>
+
+
+</classes>
+

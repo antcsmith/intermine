@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="KeggReactions" is-interface="true">
+  <attribute name="deltaG" type="java.lang.String"/>
+  <attribute name="deltaGUncertainty" type="java.lang.String"/>
+</class>
+
+
+</classes>
+

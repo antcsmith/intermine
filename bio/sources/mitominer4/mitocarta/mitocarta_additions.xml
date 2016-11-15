@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="Gene" is-interface="true">
+<attribute name="mitoEvidenceMitoCarta" type="java.lang.Boolean"/>
+<collection name="mitocarta" referenced-type="MitoCarta" reverse-reference="genes" ordered="true"/>
+</class>
+
+<class name="MitoCarta" is-interface="true">
+  <attribute name="inMitoCartaList" type="java.lang.Boolean"/>
+  <attribute name="originalID" type="java.lang.String"/>
+  <attribute name="maestroScore" type="java.lang.Double"/>
+  <attribute name="FDR" type="java.lang.Double"/>
+  <attribute name="evidence" type="java.lang.String"/>
+  <attribute name="tissue" type="java.lang.String"/>
+  <collection name="genes" referenced-type="Gene" reverse-reference="mitocarta"/>
+</class>
+
+</classes>
+

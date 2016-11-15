@@ -1,0 +1,51 @@
+<?xml version="1.0"?> 
+<classes>
+<class name="Gene" is-interface="true">
+   <attribute name="mitoEvidenceMassSpecStudies" type="java.lang.Integer"/>
+   <attribute name="mitoEvidenceMassSpecExperiments" type="java.lang.Integer"/>
+   <collection name="massSpec" referenced-type="MassSpectrometry" reverse-reference="genes"/>
+   <collection name="mitochondrialLocation" referenced-type="MitochondrialLocation" reverse-reference="genes"/>
+</class>
+
+<class name="Publication" is-interface="true">
+  <collection name="massSpec" referenced-type="MassSpectrometry" reverse-reference="publications"/>
+</class> 
+
+<class name="Organism" is-interface="true">
+  <collection name="massSpec" referenced-type="MassSpectrometry" reverse-reference="organisms" ordered="true"/>
+</class>
+
+<class name="MassSpectrometry" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="originalIdentifier" type="java.lang.String"/>
+  <attribute name="numberOfPeptides" type="java.lang.String"/>
+  <attribute name="coverage" type="java.lang.String"/>
+  <attribute name="molecularWeightDa" type="java.lang.String"/>
+  <attribute name="pI" type="java.lang.String"/>
+  <attribute name="sequence" type="java.lang.String"/>
+  <attribute name="tissue" type="java.lang.String"/>
+  <!--<attribute name="subcellularLocation" type="java.lang.String"/>-->
+  <collection name="genes" referenced-type="Gene" reverse-reference="massSpec"/>
+  <reference name="publications" referenced-type="Publication" reverse-reference="massSpec" ordered="true"/>
+  <reference name="organisms" referenced-type="Organism" reverse-reference="massSpec" ordered="true"/>
+  <reference name="experimentalTechnique" referenced-type="ExperimentalTechnique" reverse-reference="massSpec"/>
+  <collection name="mitochondrialLocation" referenced-type="MitochondrialLocation" reverse-reference="massSpec"/>
+</class>
+
+<class name="ExperimentalTechnique" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="purification" type="java.lang.String"/>
+  <attribute name="separation" type="java.lang.String"/>
+  <attribute name="identification" type="java.lang.String"/>
+  <collection name="massSpec" referenced-type="MassSpectrometry" reverse-reference="experimentalTechnique"/>
+</class>
+
+<class name="MitochondrialLocation" is-interface="true">
+   <attribute name="mitochondrialLocation" type="java.lang.String"/>
+   <attribute name="evidenceType" type="java.lang.String"/>
+   <collection name="genes" referenced-type="Gene" reverse-reference="mitochondrialLocation"/>
+   <collection name="massSpec" referenced-type="MassSpectrometry" reverse-reference="mitochondrialLocation"/>
+</class>   
+
+</classes>
+

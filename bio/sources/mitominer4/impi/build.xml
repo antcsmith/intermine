@@ -1,0 +1,6 @@
+<project name="impi" default="default" basedir=".">
+  <description>build , test, package impi</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<class name="rnai" is-interface="true">
+  <attribute name="screenName" type="java.lang.String"/>
+  <attribute name="screenId" type="java.lang.String"/>
+  <attribute name="geneSymbol" type="java.lang.String"/>
+  <attribute name="phenotype" type="java.lang.String"/>
+  <attribute name="score" type="java.lang.String"/>
+  <attribute name="conditions" type="java.lang.String"/>
+  <reference name="gene" referenced-type="Gene" reverse-reference="rnai"/>
+  <reference name="publication" referenced-type="Publication" reverse-reference="rnai"/>
+</class>
+<class name="Publication" is-interface="true">
+  <collection name="rnai" referenced-type="rnai"  reverse-reference="publication"/>
+</class>
+<class name="Gene" is-interface="true">
+  <collection name="rnai" referenced-type="rnai"  reverse-reference="gene"/>
+</class>
+
+</classes>

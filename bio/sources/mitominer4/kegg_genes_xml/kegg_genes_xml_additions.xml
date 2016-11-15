@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="Gene" is-interface="true">
+<collection name="ec" referenced-type="ECNumber" reverse-reference="genes" ordered="true"/>
+</class>  
+
+<class name="ECNumber" is-interface="true">
+<collection name="genes" referenced-type="Gene" reverse-reference="ec" ordered="true"/>
+</class>
+
+
+</classes>
+
+
+

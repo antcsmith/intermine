@@ -1,0 +1,6 @@
+<project name="hpa_loc" default="default" basedir=".">
+  <description>build, test, package hpa_loc</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

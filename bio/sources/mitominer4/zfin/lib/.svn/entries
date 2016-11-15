@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="9820"
+   name=""
+   committed-date="2006-07-31T13:33:18.581708Z"
+   url="svn://subversion.flymine.org/trunk/bio/sources/tab-separated-file/lib"
+   last-author="kmr"
+   kind="dir"
+   uuid="37e1b716-f2f3-0310-95ce-c813c9c44928"
+   revision="10855"/>
+</wc-entries>

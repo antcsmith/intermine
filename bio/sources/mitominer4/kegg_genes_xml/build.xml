@@ -1,0 +1,6 @@
+<project name="kegg_genes_xml" default="default" basedir=".">
+  <description>build, test, package kegg_genes_xml</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

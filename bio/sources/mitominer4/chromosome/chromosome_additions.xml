@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<classes>
+<class name="Gene" is-interface="true">
+   <attribute name="chr" type="java.lang.String"/>
+   <attribute name="mitoEncoded" type="java.lang.Boolean"/>
+   <attribute name="mitoEvidenceGO" type="java.lang.Boolean"/>
+   <attribute name="phenotype" type="java.lang.Boolean"/>
+</class>
+
+
+
+
+</classes>

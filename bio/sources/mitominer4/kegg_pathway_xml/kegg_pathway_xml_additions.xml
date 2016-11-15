@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="KeggPathways" is-interface="true">
+<attribute name="pathway" type="java.lang.String"/>
+<attribute name="pathwayDescription" type="java.lang.String"/>
+<collection name="ec" referenced-type="ECNumber" reverse-reference="pathways" ordered="true"/>
+</class>  
+
+<class name="ECNumber" is-interface="true">
+<collection name="pathways" referenced-type="KeggPathways" reverse-reference="ec" ordered="true"/>
+</class>
+
+
+</classes>
+
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0"?> 
+<classes>
+<class name="Gene" is-interface="true">
+   <collection name="mousePhenotype" referenced-type="MousePhenotype" reverse-reference="gene"/>
+</class>
+
+<class name="MousePhenotype" is-interface="true">
+   <collection name="gene" referenced-type="Gene" reverse-reference="mousePhenotype"/>
+   <attribute name="identifier" type="java.lang.String"/>
+   <attribute name="name" type="java.lang.String"/>
+   <attribute name="description" type="java.lang.String"/>
+<reference name="publications" referenced-type="Publication" reverse-reference="mousePhenotype" ordered="true"/>
+</class> 
+
+<class name="Publication" is-interface="true">
+  <collection name="mousePhenotype" referenced-type="MousePhenotype" reverse-reference="publications"/>
+</class> 
+
+</classes>
+

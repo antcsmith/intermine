@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="Gene" is-interface="true">
+<collection name="exac" referenced-type="ExAC" reverse-reference="genes" ordered="true"/>
+</class>
+
+<class name="ExAC" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="n_exons" type="java.lang.String"/>
+  <attribute name="n_syn" type="java.lang.String"/>
+  <attribute name="n_mis" type="java.lang.String"/>
+  <attribute name="n_lof" type="java.lang.String"/>
+  <attribute name="lof_z" type="java.lang.String"/>
+  <attribute name="pLI" type="java.lang.String"/>
+  <attribute name="KaKs" type="java.lang.String"/>
+  <collection name="genes" referenced-type="Gene" reverse-reference="exac"/>
+</class>
+
+</classes>
+

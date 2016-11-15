@@ -1,0 +1,23 @@
+<?xml version="1.0"?> 
+<classes>
+<class name="Gene" is-interface="true">
+   <attribute name="mitoEvidenceHumanProteinAtlas" type="java.lang.Boolean"/>
+   <collection name="proteinAtlasLocalisation" referenced-type="ProteinAtlasLocalisation" reverse-reference="genes"/>
+</class>
+
+<class name="CellularLocation" is-interface="true">
+<collection name="proteinAtlasLocalisation" referenced-type="ProteinAtlasLocalisation" reverse-reference="cellularLocation"/>
+</class>
+
+<class name="ProteinAtlasLocalisation" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="mainLocation" type="java.lang.String"/>
+  <attribute name="otherLocation" type="java.lang.String"/>
+  <attribute name="expressionType" type="java.lang.String"/>
+  <attribute name="reliability" type="java.lang.String"/>
+  <collection name="cellularLocation" referenced-type="CellularLocation" reverse-reference="proteinAtlasLocalisation" ordered="true"/>
+  <collection name="genes" referenced-type="Gene" reverse-reference="proteinAtlasLocalisation"/>
+</class>
+
+</classes>
+

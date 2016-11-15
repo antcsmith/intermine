@@ -1,0 +1,6 @@
+<project name="mouse-phenotype-data" default="default" basedir=".">
+  <description>build, test, package mouse-phenotype-data</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

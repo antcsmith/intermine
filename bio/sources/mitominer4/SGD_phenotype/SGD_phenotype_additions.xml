@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<classes>
+<class name="SGDphenotype" is-interface="true">
+   <attribute name="identifier" type="java.lang.String"/>
+   <attribute name="experimentType" type="java.lang.String"/>
+   <attribute name="mutantType" type="java.lang.String"/>
+   <attribute name="allele" type="java.lang.String"/>
+   <attribute name="strainBackground" type="java.lang.String"/>
+   <attribute name="phenotype" type="java.lang.String"/>
+   <attribute name="effect" type="java.lang.String"/>
+   <attribute name="chemical" type="java.lang.String"/>
+   <attribute name="condition" type="java.lang.String"/>
+   <attribute name="details" type="java.lang.String"/>
+   <attribute name="reporter" type="java.lang.String"/>
+   <collection name="genes" referenced-type="Gene" reverse-reference="yeastPhenotype"/>
+   <reference name="publications" referenced-type="Publication" reverse-reference="yeastPhenotype" ordered="true"/>
+</class>
+
+<class name="Publication" is-interface="true">
+  <collection name="yeastPhenotype" referenced-type="SGDphenotype" reverse-reference="publications"/>
+</class> 
+
+
+<class name="Gene" is-interface="true">
+<collection name="yeastPhenotype" referenced-type="SGDphenotype" reverse-reference="genes" ordered="true"/>
+</class>
+
+</classes>

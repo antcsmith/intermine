@@ -991,10 +991,11 @@ public class UniprotConverter extends BioDirectoryConverter
                 if (StringUtils.isEmpty(identifier)) {
                     continue;
                 }
-                if (GENE_PREFIXES.containsKey(taxId)) {
+                // ACS 18 Dec 15 Commented this out as we use Ensembl as the primary identifier and we don't want RGD: stuck infront of it
+                //if (GENE_PREFIXES.containsKey(taxId)) {
                     // Prepend RGD:
-                    identifier = GENE_PREFIXES.get(taxId) + identifier;
-                }
+                //    identifier = GENE_PREFIXES.get(taxId) + identifier;
+                //}
                 gene = getGene(protein, uniprotEntry, identifier, taxId,
                         uniqueIdentifierField);
                 // if we only have one gene, store later, we may have other gene fields to update
@@ -1015,11 +1016,14 @@ public class UniprotConverter extends BioDirectoryConverter
                         if (StringUtils.isEmpty(geneIdentifier)) {
                             continue;
                         }
+                        // ACS 18 dec 15 - To "RGD:" to secondaryIdentifier only
+                        if ("secondaryIdentifier".equals(geneField)) {//
                         if (GENE_PREFIXES.containsKey(taxId)) {
                             // Prepend RGD:
                             geneIdentifier = GENE_PREFIXES.get(taxId) + geneIdentifier;
                         }
-
+                        }//
+                        
                         if ("primaryIdentifier".equals(geneField)) {
                             String resolvedId = resolveGene(taxId, geneIdentifier);
                             if (resolvedId == null) {

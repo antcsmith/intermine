@@ -1,0 +1,6 @@
+<project name="publication_xml" default="default" basedir=".">
+  <description>build, test, package publication_xml</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

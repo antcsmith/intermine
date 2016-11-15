@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<classes>
+<class name="CellularLocation" is-interface="true">
+   <attribute name="cellularLocation" type="java.lang.String"/>
+   <attribute name="evidenceType" type="java.lang.String"/>
+   <collection name="genes" referenced-type="Gene" reverse-reference="cellularLocation"/>
+   <collection name="massSpec" referenced-type="MassSpectrometry" reverse-reference="cellularLocation"/>
+   <collection name="GFP" referenced-type="GFP" reverse-reference="cellularLocation"/>
+</class>
+
+<class name="Gene" is-interface="true">
+<collection name="cellularLocation" referenced-type="CellularLocation" reverse-reference="genes"/>
+</class> 
+
+<class name="MassSpectrometry" is-interface="true">
+<reference name="cellularLocation" referenced-type="CellularLocation" reverse-reference="massSpec" ordered="true"/>
+</class>
+
+<class name="GFP" is-interface="true">
+<reference name="cellularLocation" referenced-type="CellularLocation" reverse-reference="GFP" ordered="true"/> 
+</class>
+
+
+
+</classes>

@@ -1,0 +1,6 @@
+<project name="MTS" default="default" basedir=".">
+  <description>build , test, package MTS</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<class name="GXDExpression" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="assayType" type="java.lang.String"/>
+  <attribute name="stage" type="java.lang.String"/>
+  <attribute name="age" type="java.lang.String"/>
+  <attribute name="structure" type="java.lang.String"/>
+  <attribute name="strength" type="java.lang.String"/>
+  <attribute name="pattern" type="java.lang.String"/>
+  <attribute name="assayId" type="java.lang.String"/>
+  <attribute name="image" type="java.lang.String"/>
+  <reference name="gene" referenced-type="Gene" reverse-reference="GXDExpression"/>
+  <reference name="publication" referenced-type="Publication" reverse-reference="GXDExpression"/>
+</class>
+<class name="Publication" is-interface="true">
+  <collection name="GXDExpression" referenced-type="GXDExpression"  reverse-reference="publication"/>
+</class>
+<class name="Gene" is-interface="true">
+  <collection name="GXDExpression" referenced-type="GXDExpression"  reverse-reference="gene"/>
+</class>
+
+</classes>

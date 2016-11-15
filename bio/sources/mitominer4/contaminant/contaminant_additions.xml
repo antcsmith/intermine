@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<classes>
+<class name="Gene" is-interface="true">
+   <attribute name="commonMassSpecContaminant" type="java.lang.Boolean"/>
+</class>
+
+
+
+
+</classes>

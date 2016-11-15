@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="KeggPathways" is-interface="true">
+<collection name="reactions" referenced-type="KeggReactions" reverse-reference="pathways" ordered="true"/>
+</class>  
+
+<class name="KeggReactions" is-interface="true">
+<collection name="pathways" referenced-type="KeggPathways" reverse-reference="reactions" ordered="true"/>
+</class>
+
+</classes>
+
+
+

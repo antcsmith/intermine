@@ -1,0 +1,6 @@
+<project name="ms_xml" default="default" basedir=".">
+  <description>build, test, package ms_xml</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

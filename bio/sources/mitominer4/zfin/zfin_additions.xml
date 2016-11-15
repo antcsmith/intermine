@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="Gene" is-interface="true">
+<collection name="zfin" referenced-type="ZFIN" reverse-reference="genes" ordered="true"/>
+</class>
+
+<class name="ZFIN" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="affectedStructure" type="java.lang.String"/>
+  <attribute name="phenotype" type="java.lang.String"/>
+  <collection name="genes" referenced-type="Gene" reverse-reference="zfin"/>
+  <reference name="publications" referenced-type="Publication" reverse-reference="zfin" ordered="true"/>
+</class>
+
+<class name="Publication" is-interface="true">
+  <collection name="zfin" referenced-type="ZFIN" reverse-reference="publications"/>
+</class>
+
+</classes>
+

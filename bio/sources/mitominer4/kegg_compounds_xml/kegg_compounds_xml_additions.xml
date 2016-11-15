@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="KeggReactions" is-interface="true">
+  <collection name="compounds" referenced-type="KeggCompounds" reverse-reference="reactions" ordered="true"/>
+</class>
+
+<class name="KeggCompounds" is-interface="true">
+  <attribute name="compound" type="java.lang.String"/>
+  <attribute name="compoundName" type="java.lang.String"/>
+  <collection name="reactions" referenced-type="KeggReactions" reverse-reference="compounds" ordered="true"/>
+ </class>
+</classes>
+

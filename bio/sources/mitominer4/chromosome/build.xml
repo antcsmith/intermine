@@ -1,0 +1,6 @@
+<project name="chromosome" default="default" basedir=".">
+  <description>build, test, package chromosome</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

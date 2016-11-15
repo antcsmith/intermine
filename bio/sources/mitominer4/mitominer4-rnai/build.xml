@@ -1,0 +1,6 @@
+<project name="mitominer4-rnai" default="default" basedir=".">
+  <description>build, test, package mitominer4-rnai</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+  
+</project>

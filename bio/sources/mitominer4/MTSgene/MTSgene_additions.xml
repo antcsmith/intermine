@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="Gene" is-interface="true">
+<attribute name="MTStargetP" type="java.lang.Double"/>
+<attribute name="MTSipsort" type="java.lang.Double"/>
+<attribute name="MTSmitoprot" type="java.lang.Double"/>
+<attribute name="MTSmitofates" type="java.lang.Double"/>
+</class>
+
+</classes>
+
