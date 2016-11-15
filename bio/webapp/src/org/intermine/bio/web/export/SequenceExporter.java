@@ -221,7 +221,8 @@ public class SequenceExporter implements Exporter
         Protein protein = (Protein) object;
         bioSequence = BioSequenceFactory.make(protein);
 
-        makeHeader(header, object, row, unionPathCollection, newPathCollection);
+        //makeHeader(header, object, row, unionPathCollection, newPathCollection);
+		header.append(protein.getPrimaryAccession()); 
 
         return bioSequence;
     }
