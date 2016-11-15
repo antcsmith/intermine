@@ -1,0 +1,7 @@
+<project name="mitominer4-postprocess" default="default" basedir=".">
+
+  <description>perform post processing for mitominer4</description>
+
+  <import file="../../imbuild/postprocess.xml"/>
+
+</project>

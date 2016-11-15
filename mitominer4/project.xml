@@ -1,0 +1,216 @@
+<project type="bio">
+  <property name="target.model" value="genomic"/>
+  <property name="source.location" location="../bio/sources/"/>
+  <property name="source.location" location="../bio/sources/mitominer4"/>
+  <property name="source.location" location="../bio/sources/human"/>
+  <property name="common.os.prefix" value="common"/>
+  <property name="intermine.properties.file" value="mitominer4.properties"/>
+  <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
+
+    <sources>
+    
+      <source name="uniprot" type="uniprot">
+      	<property name="uniprot.organisms" value="9606 10090 10116 7955 559292 284812"/>
+        <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2015_12/"/>
+      	<property name="allowduplicates" value="true"/>
+      	<property name="loadfragments" value="false"/>
+      	<property name="creatego" value="false"/>   
+      </source>
+    
+      <source name="uniprot-fasta" type="fasta">
+  		<property name="fasta.taxonId" value="9606 10090 10116 7955 559292 284812"/>
+  		<property name="fasta.className" value="org.intermine.model.bio.Protein"/>
+  		<property name="fasta.classAttribute" value="primaryAccession"/>
+  		<property name="fasta.dataSetTitle" value="UniProt data set"/>
+  		<property name="fasta.dataSourceName" value="UniProt"/>
+  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2015_12"/>
+  		<property name="fasta.includes" value="uniprot_sprot_varsplic.fasta"/>
+  		<property name="fasta.sequenceType" value="protein" />
+  		<property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
+      </source>
+
+	  <source name="uniprot-keywords" type="uniprot-keywords">
+  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2015_12"/>
+  		<property name="src.data.dir.includes" value="keywlist.xml"/>
+	  </source>
+
+	  <source name="interpro" type="interpro">
+      	<property name="src.data.dir" location="/zeta/data/bioinf/research/mitominer4/processedData/interpro/"/>
+      </source>
+
+	  <source name="protein2ipr" type="protein2ipr">
+ 		<property name="src.data.dir" location="/zeta/data/bioinf/research/mitominer4/processedData/protein2ipr/"/>
+ 		<property name="src.data.dir.includes" value="protein2ipr.dat"/>
+ 		<property name="protein2ipr.organisms" value="9606 10090 10116 7955 559292 284812"/>
+	  </source>
+
+      <source name="ensembl-compara" type="ensembl-compara">
+        <property name="src.data.dir" location="/zeta/data/bioinf/research/mitominer4/processedData/ensemblCompara/"/>
+        <property name="ensemblcompara.organisms" value="9606 10090 10116 7227 559292 284812"/>
+      </source>
+      
+      <source name="gfp_xml" type="gfp_xml" dump="false">
+    	<property name="src.data.dir" location="/zeta/data/bioinf/research/mitominer4/processedData/gfp/" />
+      </source>
+
+      <source name="ms_xml" type="ms_xml" dump="false">
+     	<property name="src.data.dir" location="/zeta/data/bioinf/research/mitominer4/processedData/mass-spec/" />
+      </source>
+
+      <source name="go" type="go" dump="true">
+      	<property name="src.data.file" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2015-10-14/gene_ontology.obo"/>
+      </source>
+    
+      <source name="go-annotation" type="go-annotation">
+      	<property name="ontologyfile" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2015-12-11/gene_ontology.obo"/>
+      	<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2015-12-11/uniprot/"/>
+        <property name="src.data.dir.includes" value="gene_association*"/> 
+      	<property name="ontologyPrefix" value="GO"/>
+      </source>
+
+      <source name="MTS" type="MTS" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/MTS/output_MTS.xml" />
+      </source>
+    
+      <source name="MTSgene" type="MTSgene" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/MTS/output_MTSgene.xml" />
+      </source>
+          
+      <source name="cellularlocation" type="cellularlocation" dump="false">
+      </source>
+            
+      <source name="chromosome" type="chromosome" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/chromosome/output_chromosome.xml" />
+      </source>
+      
+      <source name="contaminant" type="contaminant" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/contaminant/contaminant.xml" />
+      </source>
+      
+      <source name="mitocarta" type="mitocarta" dump="false">
+    	<property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/mitocarta/mitocarta.xml" />
+      </source>
+      
+      <source name="kegg_compounds_xml" type="kegg_compounds_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/kegg_compounds.xml" />
+      </source>
+    
+      <source name="kegg_direction_xml" type="kegg_direction_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/kegg_direction.xml" />
+      </source>
+    
+      <source name="kegg_ec_xml" type="kegg_ec_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/kegg_ec.xml" />
+      </source>
+    
+      <!--<source name="kegg_genes_xml" type="kegg_genes_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/data.xml" />
+      </source>-->
+    
+      <source name="kegg_gibbs_xml" type="kegg_gibbs_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/kegg_gibbs.xml" />
+      </source>
+    
+      <source name="kegg_pathway_xml" type="kegg_pathway_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/kegg_pathway.xml" />
+      </source>
+    
+      <source name="kegg_pathwayreaction_xml" type="kegg_pathwayreaction_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/kegg_pathway_reaction.xml" />
+      </source>
+    
+      <source name="kegg_reactions_xml" type="kegg_reactions_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/kegg/kegg_reactions.xml" />
+      </source>
+    
+      <source name="publication_xml" type="publication_xml" dump="false">
+        <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/publication_xml/publication.xml" />
+      </source>
+      
+      
+    <!-->  Still to be converted  </-->
+      
+    
+    
+    <source name="impi" type="impi" dump="false">
+    <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/IMPI/impi.xml" />
+    </source>
+    
+    
+    
+    <!-- ###### PHENOTYPE + TISSUE ########-->
+    
+    <source name="hpa_tissue" type="hpa_tissue">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/HPA/output_tissue.xml" />
+    </source>
+    
+    <source name="hpa_loc" type="hpa_loc" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/HPA/HPAloc.xml" />
+    </source>
+    
+    <source name="hpa_cancer" type="hpa_cancer" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/HPA/output_cancer.xml" />
+    </source>
+    
+    <source name="SGD_phenotype" type="SGD_phenotype" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/SGD/SGDphenotype.xml" />
+    </source>
+      
+    <source name="exac" type="exac" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/exac/exac.xml" />
+    </source>
+    
+    <source name="zfin" type="zfin" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/zfin/zfin.xml" />
+    </source>
+      
+    <!--<source name="mitominer4-rnai" type="mitominer4-rnai" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/RNAi/RNAi.xml" />
+    </source>-->
+      
+    <source name="mitominer4-omim" type="mitominer4-omim" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/omim/output_omim.xml" />
+    </source>
+      
+    <source name="mouse-phenotype-data" type="mouse-phenotype-data" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/mouse-phenotype/data.xml" />
+    </source>
+      
+    <source name="arrayexpress-atlas" type="arrayexpress-atlas" dump="false">
+      <property name="src.data.dir" location="/zeta/data/bioinf/research/mitominer4/processedData/proteinAtlasExpression/E-MTAB-62-wrongPValue/" />
+    </source>
+    
+    <source name="biogrid" type="biogrid">
+      <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/biogrid/3.2.121/"/>
+      <property name="src.data.dir.includes" value="*psi25.xml"/>
+      <property name="biogrid.organisms" value="9606 10090 10116 7955 284812 559292"/>
+    </source>
+    
+    <source name="psi-mi-ontology" type="psi-mi-ontology">
+  		<property name="src.data.file" location="/zeta/data/datasets/mitominer/mitominer4/psi-mi/psi-mi.obo"/>
+	</source>
+    
+    
+    <!-- ####### PHENOTYPE END ####### -->
+    
+    <source name="entrez-organism" type="entrez-organism">
+          <property name="src.data.file" location="build/organisms.xml"/>
+        </source>
+        
+    <source name="update-publications" type="update-publications">
+          <property name="src.data.file" location="build/publications.xml"/>
+    </source>
+        
+  </sources>
+
+  <post-processing>
+        <post-process dump="false" name="create-references"/>
+        <post-process dump="false" name="do-sources"/>
+        <post-process dump="false" name="create-attribute-indexes"/>
+        <post-process dump="false" name="summarise-objectstore"/>
+        <post-process dump="false" name="create-autocomplete-index"/>
+        <post-process dump="false" name="create-search-index"/>
+  </post-processing>
+
+</project>
+

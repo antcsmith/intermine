@@ -1,0 +1,99 @@
+<aspects>
+ <aspect name="Mitochondrial Gene Lists">
+    <subtitle></subtitle>
+    <icon-image>model/images/refsetlogo.jpg</icon-image>
+    <large-image>model/images/refsetlogo.jpg</large-image>
+    <intro-text>
+     Mitochondrial reference sets - IMPI and MitoCarta 2.0
+    </intro-text>
+    <tile-name>model/refset.jsp</tile-name>
+ 	<aspect-source name="IMPI" url="http://www.mrc-mbu.cam.ac.uk/impi/"/>
+    <aspect-source name="MitoCarta" url="http://www.broadinstitute.org/scientific-community/science/programs/metabolic-disease-program/publications/mitocarta/mitocarta-in-0"/>
+ 	</aspect>
+ 
+ <aspect name="Localisation Evidence">
+    <subtitle></subtitle>
+    <icon-image>model/images/gfp.png</icon-image>
+    <large-image>model/images/gfp.png</large-image>
+    <intro-text>
+     Proteomics data from large-scale datasets of mitochondrial localisation
+    </intro-text>
+    <tile-name>model/expdata.jsp</tile-name>
+</aspect>
+
+   <aspect name="Protein MTS">
+    <subtitle></subtitle>
+    <icon-image>model/images/proteins.png</icon-image>
+    <large-image>model/images/proteins.png</large-image>
+    <intro-text>
+      Proteins and mitochondrial targeting sequence predictions
+    </intro-text>
+    <tile-name>model/protein.jsp</tile-name>
+    <aspect-source name="UniProt" url="http://www.uniprot.org"/>
+    <aspect-source name="TargetP" url="http://www.cbs.dtu.dk/services/TargetP/"/>
+    <aspect-source name="MitoProt" url="https://ihg.gsf.de/ihg/mitoprot.html"/>
+    <aspect-source name="iPSORT" url="http://ipsort.hgc.jp"/>
+    <aspect-source name="MitoFates" url="http://mitf.cbrc.jp/MitoFates/cgi-bin/top.cgi"/>
+</aspect>
+  
+<aspect name="Annotation">
+    <subtitle></subtitle>
+    <icon-image>model/images/ontology.gif</icon-image>
+    <large-image>model/images/ontology.gif</large-image>
+    <intro-text>
+      Gene and protein annotation
+    </intro-text>
+    <tile-name>model/annotation.jsp</tile-name>
+    <aspect-source name="Gene Ontology Consortium" url="http://www.geneontology.org/"/>
+    <aspect-source name="UniProt" url="http://www.uniprot.org"/>
+  </aspect>
+
+<aspect name="Metabolism">
+    <subtitle></subtitle>
+    <icon-image>model/images/keggPlain.gif</icon-image>
+    <large-image>model/images/keggPlain.gif</large-image>
+    <intro-text>
+     KEGG metabolic pathway, reaction, metabolite and enzyme data.
+    </intro-text>
+    <tile-name>model/kegg.jsp</tile-name>
+    <aspect-source name="KEGG" url="http://www.genome.jp/kegg"/>
+  </aspect>
+
+<aspect name="Phenotypes">
+    <subtitle></subtitle>
+    <icon-image>model/images/disease.png</icon-image>
+    <large-image>model/images/disease.png</large-image>
+    <intro-text>
+      Phenotype and disease data
+    </intro-text>
+    <tile-name>model/phenotypes.jsp</tile-name>
+    <aspect-source name="ZFIN" url="http://zfin.org"/>
+    <aspect-source name="MGI" url="http://www.informatics.jax.org"/>
+    <aspect-source name="SGD" url="http://www.yeastgenome.org"/>
+    <aspect-source name="OMIM" url="http://www.ncbi.nlm.nih.gov/sites/entrez?db=OMIM"/>
+  </aspect>
+
+<aspect name="Interactions">
+    <subtitle></subtitle>
+    <icon-image>model/images/interaction.png</icon-image>
+    <large-image>model/images/interaction.png</large-image>
+    <intro-text>
+     Protein and genetic interactions
+    </intro-text>
+    <tile-name>model/interactions.jsp</tile-name>
+    <aspect-source name="BioGRID" url="http://thebiogrid.org"/>
+ </aspect>
+ 
+ 
+ 
+ <!--<aspect name="Genes">
+    <subtitle>Genome annotation</subtitle>
+    <icon-image>model/images/genomics.gif</icon-image>
+    <large-image>model/images/genomics.gif</large-image>
+    <intro-text>
+      Gene identifiers taken from UniProt.
+    </intro-text>
+    <tile-name>model/genomics.jsp</tile-name>
+    <aspect-source name="UniProt" url="http://www.uniprot.org"/>
+  </aspect>-->
+</aspects>
