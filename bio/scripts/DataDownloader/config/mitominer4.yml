@@ -1,0 +1,39 @@
+log_dir: "download_logs/"
+data_dir: "Download/"
+
+default_sources:
+  - "GOAnnotation"
+  - "EnsemblCompara"
+  - "UniProt"
+  - "BioGRID"
+  
+UniProt:
+    organisms:
+        - 9606
+        - 10090
+        - 10116
+        - 7955
+        - 559292
+        - 284812
+
+    excluded_organisms:
+        - 10091
+        - 10092
+        - 35531
+        - 39442
+        - 46244
+        - 57486
+        - 63221
+        - 116058
+        - 1643390
+        - 179238
+        - 180454
+        - 377270
+        - 377271
+        - 377586
+        - 377587
+        - 943925
+        - 943926
+        - 741158
+        - 1449913
+        - 477815
