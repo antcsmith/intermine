@@ -60,9 +60,17 @@ sub default_error_checker {
     }
 }
 
+#sub build_user_agent {
+#    return LWP::UserAgent->new;
+#}
+### ACS 27/FEB/17 so uses proxy
 sub build_user_agent {
-    return LWP::UserAgent->new;
+     my $agent = LWP::UserAgent->new;
+        $agent->env_proxy;
+        return $agent;
 }
+
+##### END
 
 sub fetch {
     my $self = shift;

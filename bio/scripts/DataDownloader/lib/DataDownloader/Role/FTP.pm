@@ -61,7 +61,7 @@ sub connect {
     my $dir = shift || $self->get_remote_dir;
 
     my $host = $self->get_host;
-    my $ftp = Net::FTP->new($host, Passive => 1)
+    my $ftp = Net::FTP->new($host, Passive => 1, Firewall => 'hastings.mrc-mbu.cam.ac.uk:3128' )
         or $self->die("Cannot connect to $host: $@\n");
     my @credentials = $self->get_login_credentials;
     $ftp->login(@credentials)

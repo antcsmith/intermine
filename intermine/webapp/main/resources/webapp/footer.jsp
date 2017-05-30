@@ -45,8 +45,7 @@
 </div>
 <div class="funding-footer footer">
   <!-- funding -->
-  <div class="funders"><fmt:message key="funding" /></div>
-  <div class="credits"><fmt:message key="credits" /></div>
+  <div class="funders"><fmt:message key="funding" /><fmt:message key="credits" /></div>
 </div>
 
 </div>
@@ -88,8 +87,13 @@
         <li><a href="http://www.humanmine.org" target="_blank">HumanMine</a></li>
     </ul>
 
+<<<<<<< HEAD
     <p class="footer-copy">&copy; 2002 - 2016 Department of Genetics, University of Cambridge, Downing Street,<br />
         Cambridge CB2 3EH, United Kingdom</p>-->
+=======
+    <p class="footer-copy">&copy; 2002 - 2017 Department of Genetics, University of Cambridge, Downing Street,<br />
+        Cambridge CB2 3EH, United Kingdom</p>
+>>>>>>> e322475d681d523bf5461bdf1cfc42c08eb6f8c1
 
     <div style="clear:both"></div>
 </div>
