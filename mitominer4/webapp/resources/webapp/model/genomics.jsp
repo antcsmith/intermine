@@ -11,7 +11,7 @@
       <div class="body">
         <DL>
                         
-            MitoMiner contains various gene identifiers mapped to UniProt protein entries for all 12 species included in MitoMiner.
+            MitoMiner contains various gene identifiers mapped to UniProt protein entries for all 5 species included in MitoMiner.
 	    <BR><BR>
             We include the following:
             <UL>

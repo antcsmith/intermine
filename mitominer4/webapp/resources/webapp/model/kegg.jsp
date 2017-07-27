@@ -17,7 +17,7 @@
 	  The <a href="http://www.genome.jp/kegg/">KEGG</a> database is a collection of manually curated metabolic pathway maps that are based on molecular interaction
 	  and reaction networks. Pathway and reaction data can provide a context for a protein and allow metabolic networks to be created.
 	  Information regarding pathways, reactions, compounds and enzymes have been extracted from <a href="http://www.genome.jp/kegg/">KEGG</a> and loaded into 
-	  MitoMiner (last updated November 2015).
+	  MitoMiner (last updated June 2017).
 	<BR><BR>
 	Due to the requirements of the KEGG license agreement, users of this service may not download large quantities of KEGG Data.
         </DL>

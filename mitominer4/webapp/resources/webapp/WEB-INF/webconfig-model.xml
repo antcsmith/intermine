@@ -370,7 +370,6 @@
       <fieldconfig fieldExpr="weak"/>
       <fieldconfig fieldExpr="negative"/>
       <fieldconfig fieldExpr="totalPatients"/>
-      <fieldconfig fieldExpr="expressionType"/>
     </fields>
   </class>
     
@@ -432,6 +431,16 @@
       <fieldconfig fieldExpr="phenotype"/>
       <fieldconfig fieldExpr="publications.pubMedId" label="PubMed ID"/>
       <fieldconfig fieldExpr="publications.firstAuthor" label="Publication > First Author"/>
+    </fields>
+  </class>
+
+<class className="org.intermine.model.bio.MitochondrialDiseases" label="Mitochondrial Diseases">
+    <fields>
+      <fieldconfig fieldExpr="identifier" />
+      <fieldconfig fieldExpr="description"/>
+      <fieldconfig fieldExpr="inheritance"/>
+      <fieldconfig fieldExpr="WashUlinkResults" label="Link to WashU Neuromuscular Disease Center" showInInlineCollection="false"/>
+      <fieldconfig fieldExpr="WashUlinkReport" label="Link to WashU Neuromuscular Disease Center" showInResults="false" showInSummary="false"/>
     </fields>
   </class>
 
@@ -513,12 +522,39 @@
                      replacesFields="comments"
                      placement="Annotation"
                      types="Gene,Protein"/>
+                     
+    <reportdisplayer javaClass="org.intermine.bio.web.displayer.HPAExpressionDisplayer"
+                     jspName="model/hpaExpressionDisplayer.jsp"
+                     replacesFields="proteinAtlasExpressionRNA"
+                     placement="Phenotypes"
+                     types="Gene"/>
+                     
+    <reportdisplayer javaClass="org.intermine.bio.web.displayer.HPACancerDisplayer"
+                     jspName="model/hpaCancerDisplayer.jsp"
+                     replacesFields="proteinAtlasCancerExpression"
+                     placement="Phenotypes"
+                     types="Gene"/>
 
 
   </reportdisplayers>
 <!--replacesFields="synonyms" -->
 <!-- widgets -->
 <widgets>
+
+<!--<graphdisplayer id="hpa_rna_for_gene"
+                      title="RNA expression overview"
+                      description="HPA RNA level by tissue"
+                      graphType="ColumnChart"
+                      rangeLabel="Count (TPM)"
+                      domainLabel="Tissue"
+                      startClass="Gene"
+                      typeClass="Gene"
+                      listPath=""
+                      categoryPath="proteinAtlasExpressionRNA.tissue"
+                      seriesPath="proteinAtlasExpressionRNA.value"
+                      views="primaryIdentifier, symbol, secondaryIdentifier, organism.name, proteinAtlasExpressionRNA.tissue, proteinAtlasExpressionRNA.value"/>-->
+
+
 
 <!--<bagtabledisplayer id="KEGG1" title="KEGG Metabolic Pathways"
                          pathStrings="Protein.ecNumbers.pathways"

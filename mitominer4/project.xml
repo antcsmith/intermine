@@ -10,8 +10,8 @@
     <sources>
     
       <source name="uniprot" type="uniprot">
-      	<property name="uniprot.organisms" value="9606 10090 10116 7955 559292 284812"/>
-        <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2015_12/"/>
+      	<property name="uniprot.organisms" value="9606 10090 10116 7955 559292 284812 99999"/>
+        <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2017_05/"/>
       	<property name="allowduplicates" value="true"/>
       	<property name="loadfragments" value="false"/>
       	<property name="creatego" value="false"/>   
@@ -23,14 +23,14 @@
   		<property name="fasta.classAttribute" value="primaryAccession"/>
   		<property name="fasta.dataSetTitle" value="UniProt data set"/>
   		<property name="fasta.dataSourceName" value="UniProt"/>
-  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2015_12"/>
+  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2017_05"/>
   		<property name="fasta.includes" value="uniprot_sprot_varsplic.fasta"/>
   		<property name="fasta.sequenceType" value="protein" />
   		<property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
       </source>
 
 	  <source name="uniprot-keywords" type="uniprot-keywords">
-  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2015_12"/>
+  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2017_05"/>
   		<property name="src.data.dir.includes" value="keywlist.xml"/>
 	  </source>
 
@@ -58,13 +58,13 @@
       </source>
 
       <source name="go" type="go" dump="true">
-      	<property name="src.data.file" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2015-10-14/gene_ontology.obo"/>
+      	<property name="src.data.file" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2017-05-31/go.obo"/>
       </source>
     
       <source name="go-annotation" type="go-annotation">
-      	<property name="ontologyfile" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2015-12-11/gene_ontology.obo"/>
-      	<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2015-12-11/uniprot/"/>
-        <property name="src.data.dir.includes" value="gene_association*"/> 
+      	<property name="ontologyfile" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2017-05-31/go.obo"/>
+      	<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2017-05-31/"/>
+        <property name="src.data.dir.includes" value="**/gene_association*"/> 
       	<property name="ontologyPrefix" value="GO"/>
       </source>
 
@@ -143,7 +143,11 @@
     <source name="hpa_tissue" type="hpa_tissue">
       <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/HPA/output_tissue.xml" />
     </source>
-    
+   
+    <source  name="hpa_tissue_rna" type="hpa_tissue_rna">
+	<property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/HPA/output_tissue_rna.xml"/>
+    </source>
+ 
     <source name="hpa_loc" type="hpa_loc" dump="false">
       <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/HPA/HPAloc.xml" />
     </source>
@@ -158,6 +162,10 @@
       
     <source name="exac" type="exac" dump="false">
       <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/exac/exac.xml" />
+    </source>
+    
+    <source name="washu" type="washu" dump="false">
+      <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/washu/washu.xml" />
     </source>
     
     <source name="zfin" type="zfin" dump="false">
@@ -181,7 +189,7 @@
     </source>
     
     <source name="biogrid" type="biogrid">
-      <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/biogrid/3.2.121/"/>
+      <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/biogrid/3.4.148/"/>
       <property name="src.data.dir.includes" value="*psi25.xml"/>
       <property name="biogrid.organisms" value="9606 10090 10116 7955 284812 559292"/>
     </source>

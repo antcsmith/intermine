@@ -133,7 +133,7 @@
                 <h2>Data Sources</h2>
                 <p>MitoMiner integrates <strong>annotation</strong> from the Gene Ontology project, <strong>homology</strong> data from EnsemblCompara, <strong>phenotype</strong> information from MGI, ZFIN and SGD, <strong>interaction</strong> data from BioGRID, <strong>metabolic pathway</strong> data from KEGG
                 and <strong>disease</strong> data from OMIM and ArrayExpress. This is combined with <strong>localisation data</strong> from
-                <im:querylink text="52 large-scale" skipBuilder="true">
+                <im:querylink text="54 large-scale" skipBuilder="true">
                 <query name="" model="genomic" view="Publication.firstAuthor Publication.pubMedId Publication.title Publication.journal Publication.volume Publication.issue Publication.pages Publication.year" longDescription="" sortOrder="Publication.firstAuthor asc" constraintLogic="A and B and C">
                 <constraint path="Publication.evidenceType" code="A" op="IS NOT NULL"/>
                 <constraint path="Publication.evidenceType" code="B" op="!=" value="GO"/>
@@ -538,7 +538,7 @@
             <p> <a href="mitocarta.do"><strong>MitoCarta 2.0 </strong></a> - an inventory of 1158 human and mouse genes encoding proteins with strong support</p>
             <p>of mitochondrial localisation. <a href="mitocarta.do">Read about and query MitoCarta 2.0 here</a></p>
             <BR>
-            <p> <a href="impi.do"><strong>IMPI (version Q2 2016)</strong></a>- Integrated Mitochondrial Protein Index of 1408 mammalian genes encoding proteins that are associated</p>
+            <p> <a href="impi.do"><strong>IMPI (version Q3 2017)</strong></a>- Integrated Mitochondrial Protein Index of 1550 mammalian genes (1130 known and 420 predicted from experimental data) encoding proteins that are associated</p>
             <p> with the mitochondrion. <a href="impi.do">Read about and query IMPI here</a></p>
           <BR>
           <BR>

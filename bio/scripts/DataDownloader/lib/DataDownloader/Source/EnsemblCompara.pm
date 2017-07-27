@@ -24,11 +24,11 @@ use constant {
 };
 
 use constant ORGANISMS => qw(
-    9606 7955 10090 10116 4932 7227 6239
+    9606 10090 10116 7955 4932
 );
 # only load genes if they are homologues of gene of organism of interest.  can be null
 use constant HOMOLOGUES => qw(
-    9606 7955 10090 10116 4932 7227 6239
+    9606 10090 10116 7955 4932
 );
 
 sub generate_version {

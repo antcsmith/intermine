@@ -82,7 +82,7 @@
 
 <c:choose>
 <c:when test="${expressions.reliability != null}">
-<h3 class="goog">Protein Atlas Tissue Expression</h3>
+<h3 class="goog">Human Protein Atlas Tissue Expression</h3>
 
   <div class="sidebar">
   	<div class="collection-of-collections">
@@ -230,7 +230,7 @@
   </script>
 </c:when>
 <c:otherwise>
-<h3 class="goog gray">Protein Atlas Tissue Expression</h3>
+<h3 class="goog gray">Human Protein Atlas Tissue Expression</h3>
 <p>No expression data available for this gene.</p>
 </c:otherwise>
 </c:choose>

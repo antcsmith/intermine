@@ -15,7 +15,7 @@
       project and <A href="http://www.uniprot.org/">UniProt</A>. UniProt annotation consists of keywords associated with that protein. GO annotation describes gene products in terms of their associated biological processes, cellular components and molecular functions in a species-independent and hierarchal manner. 
       In addition we include <A href="http://www.ebi.ac.uk/interpro/">InterPro</A> protein domain information.   
       <BR><BR>
-      UniProt, GO and Interpro annotation is available for all species included in MitoMiner (last updated Dec 2015).
+      UniProt, GO and Interpro annotation is available for all species included in MitoMiner (last updated June 2017).
       <BR><BR>	  
       You can use this information to search for genes, such as with a particular function or those involved in a particular cellular process, and see if those genes also have evidence or annotation for mitochondrial localisation.  
 

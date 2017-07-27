@@ -5,7 +5,6 @@ default_sources:
   - "GOAnnotation"
   - "EnsemblCompara"
   - "UniProt"
-  - "BioGRID"
   
 UniProt:
     organisms:

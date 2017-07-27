@@ -29,14 +29,9 @@ use constant {
     SOURCE_LINK => "http://www.geneontology.org",
     SOURCE_DIR => "go-annotation",
 };
-<<<<<<< HEAD
-my %GOA_TAXA = (mgi => 'mgi', human => 'goa_human', sgd => 'sgd', rgd => 'rgd', pombe =>'pombase', zfin=>'zfin');
-my %UNIPROT_TAXA = ( '10090' => 'mouse','10116' => 'rat', '9606' => 'human','7955' => 'zebrafish', '559292' => 'yeast', '284812' => 'pombe' );
-=======
 
 my %GOA_TAXA = (flybase => 'gene_association.fb', wormbase => 'gene_association.wb', mgi => 'gene_association.mgi', human => 'goa_human.gaf', zfin => 'gene_association.zfin', sgd => 'gene_association.sgd', rgd => 'gene_association.rgd',\
  thale => 'gene_association.tair');
->>>>>>> e322475d681d523bf5461bdf1cfc42c08eb6f8c1
 sub field2_of { return [ split( /\t/, shift ) ]->[1] || '' }
 my $order = sub { field2_of($a) cmp field2_of($b) };
 

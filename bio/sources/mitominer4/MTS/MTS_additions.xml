@@ -3,6 +3,7 @@
 
 <class name="Protein" is-interface="true">
 <attribute name="MTStargetP" type="java.lang.Double"/>
+<attribute name="MTStargetPconfidence" type="java.lang.String"/>
 <attribute name="MTSipsort" type="java.lang.Double"/>
 <attribute name="MTSmitoprot" type="java.lang.Double"/>
 <attribute name="MTSmitoprotCleavage" type="java.lang.Double"/>

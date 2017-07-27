@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<classes>
+
+<class name="Gene" is-interface="true">
+<collection name="mitodisease" referenced-type="MitochondrialDiseases" reverse-reference="genes" ordered="true"/>
+</class>
+
+<class name="MitochondrialDiseases" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="WashUlinkResults" type="java.lang.String"/>
+  <attribute name="WashUlinkReport" type="java.lang.String"/>
+  <attribute name="description" type="java.lang.String"/>
+  <attribute name="inheritance" type="java.lang.String"/>
+  <collection name="genes" referenced-type="Gene" reverse-reference="mitodisease"/>
+</class>
+
+</classes>
+

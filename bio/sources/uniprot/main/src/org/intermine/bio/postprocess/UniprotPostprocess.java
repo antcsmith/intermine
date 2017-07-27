@@ -212,9 +212,9 @@ public class UniprotPostprocess extends PostProcessor
                 thisGene.setFieldValue("mitoEncoded", false);
             }
             
-            if (thisGene.getMitoEvidenceIMPI() == null) {
-                thisGene.setFieldValue("mitoEvidenceIMPI", false);
-            }
+            //if (thisGene.getMitoEvidenceIMPI() == null) {
+            //    thisGene.setFieldValue("mitoEvidenceIMPI", false);
+            //}
             
             if (thisGene.getPhenotype() == null) {
                 thisGene.setFieldValue("phenotype", false);
@@ -228,9 +228,9 @@ public class UniprotPostprocess extends PostProcessor
             //    thisGene.setFieldValue("mitoEvidenceHumanProteinAtlas", false);
             //}
             
-            if (thisGene.getMitoEvidenceMitoCarta() == null) {
-                thisGene.setFieldValue("mitoEvidenceMitoCarta", false);
-            }
+            //if (thisGene.getMitoEvidenceMitoCarta() == null) {
+            //    thisGene.setFieldValue("mitoEvidenceMitoCarta", false);
+            //}
             
             if (thisGene.getMitoEvidenceGFP() == null) {  
                 thisGene.setFieldValue("mitoEvidenceGFP", 0);
@@ -276,7 +276,14 @@ private void updateNullHumanGenes(Query q2, boolean isMito) throws ObjectStoreEx
                 thisGene.setFieldValue("mitoEvidenceHumanProteinAtlas", false);
             }
 
-
+	    if (thisGene.getMitoEvidenceIMPI() == null) {
+                thisGene.setFieldValue("mitoEvidenceIMPI", false);
+            }
+	    
+	    if (thisGene.getMitoEvidenceMitoCarta() == null) {
+                thisGene.setFieldValue("mitoEvidenceMitoCarta", false);
+            }
+	    
 
 osw.store(thisGene);
             count++;
@@ -286,7 +293,57 @@ osw.store(thisGene);
         osw.commitTransaction();
     }
 
+private void updateNullMouseGenes(Query q3, boolean isMito) throws ObjectStoreException {
+        osw.beginTransaction();
+        int count = 0;
+        Results res = os.execute(q3);
+        Iterator<?> resultsIterator = res.iterator();
+        
+        while (resultsIterator.hasNext()) {            
+            ResultsRow<?> rr = (ResultsRow<?>) resultsIterator.next();
+            Gene thisGene = (Gene) rr.get(0);
 
+	    if (thisGene.getMitoEvidenceIMPI() == null) {
+                thisGene.setFieldValue("mitoEvidenceIMPI", false);
+            }
+	    
+	    if (thisGene.getMitoEvidenceMitoCarta() == null) {
+                thisGene.setFieldValue("mitoEvidenceMitoCarta", false);
+            }
+	    
+
+osw.store(thisGene);
+            count++;
+        }
+        
+        LOG.info("Updated " + count + "genes");
+        osw.commitTransaction();
+    }
+    
+private void updateNullRatGenes(Query q4, boolean isMito) throws ObjectStoreException {
+        osw.beginTransaction();
+        int count = 0;
+        Results res = os.execute(q4);
+        Iterator<?> resultsIterator = res.iterator();
+        
+        while (resultsIterator.hasNext()) {            
+            ResultsRow<?> rr = (ResultsRow<?>) resultsIterator.next();
+            Gene thisGene = (Gene) rr.get(0);
+
+	    if (thisGene.getMitoEvidenceIMPI() == null) {
+                thisGene.setFieldValue("mitoEvidenceIMPI", false);
+            }
+	    
+
+osw.store(thisGene);
+            count++;
+        }
+        
+        LOG.info("Updated " + count + "genes");
+        osw.commitTransaction();
+    }
+    
+    
 private static Query getHumanGenes() {
         Query q2 = new Query();
         QueryClass qcGene = new QueryClass(Gene.class);
@@ -321,8 +378,69 @@ private static Query getHumanGenes() {
         return q2;
     }
 
+private static Query getMouseGenes() {
+        Query q3 = new Query();
+        QueryClass qcGene = new QueryClass(Gene.class);
+        QueryClass qcOrganism = new QueryClass(Organism.class); 
+                
+        // from clause
+        q3.addFrom(qcGene);
+        q3.addFrom(qcOrganism);
+        
+        // SELECT clause
+        q3.addToSelect(qcGene);
+        QueryField qfOrganism = new QueryField(qcOrganism, "taxonId");
+        q3.addToSelect(qfOrganism);     
+             
+        // WHERE clause
+        ConstraintSet cs = new ConstraintSet(ConstraintOp.AND);     
+        
+        //Gene.organism
+        QueryObjectReference qcr = new QueryObjectReference(qcGene, "organism");
+        cs.addConstraint(new ContainsConstraint(qcr, ConstraintOp.CONTAINS, qcOrganism));
+        
+        // Gene.organism.taxonId = 9606
+        //QueryField qfOrganism = new QueryField(qcOrganism, "taxonId");     
+         cs.addConstraint(new SimpleConstraint(qfOrganism, ConstraintOp.EQUALS, 
+                new QueryValue(10090)));
+        
+        q3.setConstraint(cs);
+                
+        return q3;
+    }
 
-
+private static Query getRatGenes() {
+        Query q4 = new Query();
+        QueryClass qcGene = new QueryClass(Gene.class);
+        QueryClass qcOrganism = new QueryClass(Organism.class); 
+                
+        // from clause
+        q4.addFrom(qcGene);
+        q4.addFrom(qcOrganism);
+        
+        // SELECT clause
+        q4.addToSelect(qcGene);
+        QueryField qfOrganism = new QueryField(qcOrganism, "taxonId");
+        q4.addToSelect(qfOrganism);     
+             
+        // WHERE clause
+        ConstraintSet cs = new ConstraintSet(ConstraintOp.AND);     
+        
+        //Gene.organism
+        QueryObjectReference qcr = new QueryObjectReference(qcGene, "organism");
+        cs.addConstraint(new ContainsConstraint(qcr, ConstraintOp.CONTAINS, qcOrganism));
+        
+        // Gene.organism.taxonId = 9606
+        //QueryField qfOrganism = new QueryField(qcOrganism, "taxonId");     
+         cs.addConstraint(new SimpleConstraint(qfOrganism, ConstraintOp.EQUALS, 
+                new QueryValue(10116)));
+        
+        q4.setConstraint(cs);
+                
+        return q4;
+    }
+    
+    
     /**
      * @return query to retrieve all proteins in the database that have a mito keyword
      */

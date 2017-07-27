@@ -27,6 +27,12 @@
     <br/>
 
 <div id="promo-footer">
+  
+  <div class="body bottom-footer">
+    <a class="cambridge-logo" href="http://www.cam.ac.uk/" title="University of Cambridge" target="_blank">
+        <img src="images/icons/cambridge-footer-logo.png" alt="University of Cambridge logo">
+    </a>
+  </div>
   <!-- powered -->
   <div class="powered-footer footer">
     <p>Powered by</p>
@@ -34,27 +40,27 @@
       <img src="images/icons/intermine-footer-logo.png" alt="InterMine logo" />
     </a>
   </div>
-    <div class="android">
+    <!--<div class="android">
         <p>Have you tried our InterMine Android app?</p>
         <a href='https://play.google.com/store/apps/details?id=org.intermine.app&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img class="googleplay" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' /></a>
-    </div>
+    </div>-->
     <div class="cite-footer footer">
       <strong>Cite us:</strong>
           <cite>${WEB_PROPERTIES['project.citation']}</cite>
     </div>
 </div>
-<div class="funding-footer footer">
+<!--<div class="funding-footer footer">-->
   <!-- funding -->
-  <div class="funders"><fmt:message key="funding" /><fmt:message key="credits" /></div>
+  <!--<div class="funders"><fmt:message key="funding" /><fmt:message key="credits" /></div>
 </div>
 
-</div>
+</div>-->
 
 <!-- cam logo and links -->
 <div class="body bottom-footer">
-    <a class="cambridge-logo" href="http://www.cam.ac.uk/" title="University of Cambridge" target="_blank">
+    <!--<a class="cambridge-logo" href="http://www.cam.ac.uk/" title="University of Cambridge" target="_blank">
         <img src="images/icons/cambridge-footer-logo.png" alt="University of Cambridge logo">
-    </a>
+    </a>-->
 
     <ul class="footer-links">
         <!-- contact us form link -->
@@ -87,13 +93,8 @@
         <li><a href="http://www.humanmine.org" target="_blank">HumanMine</a></li>
     </ul>
 
-<<<<<<< HEAD
     <p class="footer-copy">&copy; 2002 - 2016 Department of Genetics, University of Cambridge, Downing Street,<br />
         Cambridge CB2 3EH, United Kingdom</p>-->
-=======
-    <p class="footer-copy">&copy; 2002 - 2017 Department of Genetics, University of Cambridge, Downing Street,<br />
-        Cambridge CB2 3EH, United Kingdom</p>
->>>>>>> e322475d681d523bf5461bdf1cfc42c08eb6f8c1
 
     <div style="clear:both"></div>
 </div>

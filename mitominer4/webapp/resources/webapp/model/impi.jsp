@@ -30,29 +30,30 @@
 Finding the genes that encode the mitochondrial proteome is essential for studying mitochondrial function and disease. Clues of 
 cellular localisation can be gathered from a range of sources such as the presence of a mitochondrial targeting sequence 
 or the identification of the encoded protein by mass spectrometry in a mitochondrial proteomics study. However, no one data source will 
-provide full coverage and many types of evidence will contain false positives. Therefore all this data 
+provide full coverage and many types of evidence will contain false positives. Therefore to find mitochondrial genes all this data 
 must be integrated together and evaluated holistically. 
 <BR><BR>
 Using the data contained within MitoMiner <a href="http://www.mrc-mbu.cam.ac.uk/people/alan-robinson">we</a> developed the Integrated Mitochondrial Protein Index (IMPI), a collection of genes that encode proteins 
 with strong evidence for cellular localisation within the mammalian mitochondrion. 
 <BR><BR>
-It was created using machine learning to evaluate multiple types of evidence, including evidence from recent biotinylation studies, antibody data
-from the Human Protein Atlas, predictions from four mitochondrial targeting sequence programs, and extensive experimental data from <im:querylink text="52 large-scale GFP and mass spectrometry localisation studies." skipBuilder="true">
+It was created using machine learning to evaluate multiple types of evidence, including antibody data
+from the Human Protein Atlas, predictions from four mitochondrial targeting sequence programs, interactions with known mitochondria proteins, and extensive experimental data from <im:querylink text="52 large-scale GFP and mass spectrometry localisation studies." skipBuilder="true">
            <query name="" model="genomic" view="Publication.firstAuthor Publication.pubMedId Publication.title Publication.journal Publication.volume Publication.issue Publication.pages Publication.year" longDescription="" sortOrder="Publication.firstAuthor asc" constraintLogic="A and B and C">
   <constraint path="Publication.evidenceType" code="A" op="IS NOT NULL"/>
   <constraint path="Publication.evidenceType" code="B" op="!=" value="GO"/>
   <constraint path="Publication.evidenceType" code="C" op="!=" value="UniProt Keyword"/>
 </query></im:querylink>
   Evidence was shared between the same gene in different organisms by using the homology mappings from <a href="http://www.ensembl.org/info/genome/compara/index.html">Ensembl Compara</a>.
- A random forest machine learning classifier was used to evaluate this data after training on collections of characterised mitochondrial and non-mitochondrial
-  genes. The machine learning then scored all human, mouse and rat genes depending on how similar their properties and evidence were
- to already characterised mitochondrial genes. The genes included in the final IMPI dataset were those with a score of 0.7 or greater, which  
- indicated strong evidence of mitochondrial localisation. 
- This approach solves the problem of deciding an arbitrary threshold for
-  what level of evidence can be considered "mitochondrial". We recommend, however, for an inclusive view of the mitochondrial proteome to use both the IMPI and MitoCarta datasets, as they were derived in different ways.
+ <BR><BR>
+ To create IMPI we first manually assembled a list of 1130 genes that were known to encode mitochondrial proteins and a list of 1347 genes that were known not to encode mitochondrial proteins. 
+ These lists were manually compiled and curated by consulting many different sources including disease databases and the literature.  
+ We then trained an SVM algorithm (instead of a random forest machine learning classifier used in previous versions) to learn the best way to separate these two lists using all the different types of localisation data. 
+ After training the SVM could be used to score all human genes depending on how similar their properties and evidence were to these already characterised mitochondrial genes.  
+  Predictions with a score of 0.8 or greater indicated strong evidence of mitochondrial localisation and these were included in the final IMPI dataset. Finally the homology mappings were used to find the equivalent genes in mouse and rat.
   
 <BR><BR>
-  IMPI version Q2 2016 identifies 1408 human genes that encode mitochondrially localised proteins. IMPI will be updated at regular intervals to take advantage of new evidence as it becomes available. 
+  IMPI version Q3 2017 contains 1550 human genes that encode mitochondrially localised proteins - 1130 that are known to be mitochondrial and 420 that are predicted to be mitochondrial using the evidence in MitoMiner. 
+  IMPI will be updated at regular intervals to take advantage of new evidence as it becomes available. 
      The complete IMPI dataset can be downloaded at the <a href="http://www.mrc-mbu.cam.ac.uk/impi">IMPI webpage</a>.  
 <BR><BR>
 
@@ -61,7 +62,7 @@ from the Human Protein Atlas, predictions from four mitochondrial targeting sequ
 
 <td valign="top">
       <div class="heading2">
-        View IMPI genes in MitoMiner (Version Q2 2016)
+        View IMPI genes in MitoMiner (Version Q3 2017)
       </div>
       <div class="body">
         <ul>
