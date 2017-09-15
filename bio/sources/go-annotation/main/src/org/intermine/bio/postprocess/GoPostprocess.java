@@ -388,10 +388,10 @@ public class GoPostprocess extends PostProcessor
             
             // if this is a new keyword, create object 
             if (cellularLocation == null) {
-                //cellularLocation = (CellularLocation) DynamicUtil.createObject(
-                //        Collections.singleton(CellularLocation.class));
+                cellularLocation = (CellularLocation) DynamicUtil.createObject(
+                        Collections.singleton(CellularLocation.class));
                 
-                cellularLocation = (CellularLocation) DynamicUtil.createObject(CellularLocation.class);
+                //cellularLocation = (CellularLocation) DynamicUtil.createObject(CellularLocation.class);
                 
                 cellularLocation.setEvidenceType(EVIDENCE_TYPE);
                 String location = COMPARTMENTS.get(goTermName);
@@ -483,8 +483,12 @@ public class GoPostprocess extends PostProcessor
             
             // if this is a new keyword, create object 
             if (mitochondrialLocation == null) {
+                //mitochondrialLocation = (MitochondrialLocation) DynamicUtil.createObject(
+                //        MitochondrialLocation.class);
+                
                 mitochondrialLocation = (MitochondrialLocation) DynamicUtil.createObject(
-                        MitochondrialLocation.class);
+                        Collections.singleton(MitochondrialLocation.class));
+                
                 mitochondrialLocation.setEvidenceType(EVIDENCE_TYPE);
                 
                 String location = LOCATION.get(goTermName);

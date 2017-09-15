@@ -129,7 +129,7 @@
        <p><i>R. norvegicus</i></p>
        <p><i>S. cerevisiae</i></p>
     </td>
-    <td>Large scale mass-spectometry studies of purified mitochondrial fractions (currently 48 studies)</td>
+    <td>Large scale mass-spectometry studies of purified mitochondrial fractions (currently 50 studies)</td>
     <td>Literature</td>
     <td><im:querylink text="Various" skipBuilder="true">
         <query name="" model="genomic" view="Gene.massSpec.publications.pubMedId Gene.massSpec.publications.title Gene.massSpec.publications.firstAuthor Gene.massSpec.publications.correspondingAuthor Gene.massSpec.publications.journal Gene.massSpec.publications.year"
@@ -238,7 +238,8 @@
     <td> <p><i>H. sapiens</i></p> </td>
     <td> Human disease information</td>
     <td> <a href="http://omim.org" target="_new" class="extlink">OMIM</a> - Last updated 28th June 2017 <BR>
-    <a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-62/" target="_new" class="extlink">ArrayExpress Atlas</a> - June 2011
+    <a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-62/" target="_new" class="extlink">ArrayExpress Atlas</a> - June 2011 <BR>
+    <a href="http://neuromuscular.wustl.edu" target="_new" class="extlink">WashU Neuromuscular Disease Center</a> - Last updated July 2017
     </td>
     <td> Amberger <i>et al.</i>  - <a href="http://www.ncbi.nlm.nih.gov/pubmed/18842627" target="_new" class="extlink">PubMed: 18842627</a>
          Petryszak <i>et al. </i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/24304889" target="_new" class="extlink">PubMed: 24304889</a>
@@ -266,22 +267,6 @@
   
   
   <tr>
-    <td rowspan="1"  class="leftcol"><p><h2>Interactions</h2></p></td>
-    <td>
-        <p><i>H. sapiens</i></p>
-        <p><i>M. musculus</i></p>
-        <p><i>R. norvegicus</i></p>
-        <p><i>D. rerio</i></p>
-        <p><i>S. cerevisiae</i></p>
-        <p><i>S. pombe</i></p>
-    </td>
-    <td> Protein and genetic interactions</td>
-    <td> <a href="http://www.thebiogrid.org" target="_new" class="extlink">BioGRID</a> - Version 3.4.148 </td>
-    <td> Stark et al - <a href="http://www.ncbi.nlm.nih.gov/pubmed/16381927" target="_new" class="extlink">PubMed:16381927</a></td>
-    
-  </tr>
-  
-  <tr>
     <td rowspan="1" class="leftcol"><p> <h2>Metabolic pathways</h2></p></td>
     <td>
        <p><i>H. sapiens</i></p>
@@ -293,7 +278,7 @@
     </td>
     <td> Pathway, reaction and metabolite information and the genes involved</td>
     <td> <a href="http://www.genome.jp/kegg/" target="_new" class="extlink">KEGG</a> - June 2017</td>
-    <td> Kanehisa et al - <a href="http://www.ncbi.nlm.nih.gov/pubmed/16381885" target="_new" class="extlink">PubMed: 16381885</a></td>
+    <td> Kanehisa <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/16381885" target="_new" class="extlink">PubMed: 16381885</a></td>
     
   </tr>
 
@@ -305,7 +290,7 @@
     </td>
     <td> Aggregated exome sequencing summary data</td>
     <td> <a href="http://exac.broadinstitute.org" target="_new" class="extlink">ExAC</a> - Version 0.31</td>
-    <td> N/A </td>
+    <td> Lek <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/27535533" target="_new" class="extlink">PubMed: 27535533</a> </td>
     
   </tr>
 

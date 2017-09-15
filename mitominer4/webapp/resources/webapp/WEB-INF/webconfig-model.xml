@@ -205,10 +205,12 @@
  
  <class className="org.intermine.model.bio.IMPI" label="IMPI">
     <fields>
-    <fieldconfig fieldExpr="score" label="IMPI score"/>
     <fieldconfig fieldExpr="clusterID" label="ID"/>
-    <fieldconfig fieldExpr="IMPITS" label="Training set"/>
+    <fieldconfig fieldExpr="score" label="score"/>
+    <fieldconfig fieldExpr="category"/>
     <fieldconfig fieldExpr="evidence" lineLength="300"/>
+    <fieldconfig fieldExpr="homologsUsed"/>
+    <fieldconfig fieldExpr="notes" lineLength="300"/>
     </fields>
   </class>
  
@@ -296,6 +298,7 @@
       <fieldconfig fieldExpr="experimentalTechnique.separation" label="Seperation Technique"/>
       <fieldconfig fieldExpr="experimentalTechnique.identification" label="Identification Technique"/>
       <fieldconfig fieldExpr="tissue" label="Tissue"/>
+      <fieldconfig fieldExpr="sublocation" label="Sublocation"/>
       <fieldconfig fieldExpr="publications.pubMedId" label="PubMed ID"/>
       <fieldconfig fieldExpr="publications.firstAuthor" label="Publication > First Author"/>
       <fieldconfig fieldExpr="publications.correspondingAuthor" label="Publication > Corresponding Author"/>
@@ -345,9 +348,6 @@
     <class className="org.intermine.model.bio.ProteinAtlasLocalisation" label="Human Protein Atlas Localisation">
     <fields>
       <fieldconfig fieldExpr="identifier"/>
-      <fieldconfig fieldExpr="mainLocation"/>
-      <fieldconfig fieldExpr="otherLocation"/>
-      <fieldconfig fieldExpr="expressionType"/>
       <fieldconfig fieldExpr="reliability"/>
     </fields>
   </class>
@@ -465,11 +465,11 @@
                      placement="Annotation"
                      types="Gene"/>
   
-  <reportdisplayer javaClass="org.intermine.bio.web.displayer.CytoscapeNetworkDisplayer"
+  <!--<reportdisplayer javaClass="org.intermine.bio.web.displayer.CytoscapeNetworkDisplayer"
                      jspName="model/cytoscapeNetworkDisplayer.jsp"
                      replacesFields="interactions"
                      placement="Interactions"
-                     types="Gene,Protein"/>
+                     types="Gene,Protein"/>-->
     
     
 	<reportdisplayer javaClass="org.intermine.bio.web.displayer.GeneExpressionAtlasTissuesDisplayer"

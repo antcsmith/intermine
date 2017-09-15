@@ -276,9 +276,9 @@ private void updateNullHumanGenes(Query q2, boolean isMito) throws ObjectStoreEx
                 thisGene.setFieldValue("mitoEvidenceHumanProteinAtlas", false);
             }
 
-	    if (thisGene.getMitoEvidenceIMPI() == null) {
-                thisGene.setFieldValue("mitoEvidenceIMPI", false);
-            }
+	   // if (thisGene.getMitoEvidenceIMPI() == null) {
+       //         thisGene.setFieldValue("mitoEvidenceIMPI", false);
+       //     }
 	    
 	    if (thisGene.getMitoEvidenceMitoCarta() == null) {
                 thisGene.setFieldValue("mitoEvidenceMitoCarta", false);
@@ -303,9 +303,9 @@ private void updateNullMouseGenes(Query q3, boolean isMito) throws ObjectStoreEx
             ResultsRow<?> rr = (ResultsRow<?>) resultsIterator.next();
             Gene thisGene = (Gene) rr.get(0);
 
-	    if (thisGene.getMitoEvidenceIMPI() == null) {
-                thisGene.setFieldValue("mitoEvidenceIMPI", false);
-            }
+	//    if (thisGene.getMitoEvidenceIMPI() == null) {
+    //            thisGene.setFieldValue("mitoEvidenceIMPI", false);
+    //        }
 	    
 	    if (thisGene.getMitoEvidenceMitoCarta() == null) {
                 thisGene.setFieldValue("mitoEvidenceMitoCarta", false);

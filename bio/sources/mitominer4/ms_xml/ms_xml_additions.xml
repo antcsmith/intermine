@@ -20,10 +20,11 @@
   <attribute name="originalIdentifier" type="java.lang.String"/>
   <attribute name="numberOfPeptides" type="java.lang.String"/>
   <attribute name="coverage" type="java.lang.String"/>
-  <attribute name="molecularWeightDa" type="java.lang.String"/>
+  <!--<attribute name="molecularWeightDa" type="java.lang.String"/>-->
   <attribute name="pI" type="java.lang.String"/>
   <attribute name="sequence" type="java.lang.String"/>
   <attribute name="tissue" type="java.lang.String"/>
+  <attribute name="sublocation" type="java.lang.String"/>
   <!--<attribute name="subcellularLocation" type="java.lang.String"/>-->
   <collection name="genes" referenced-type="Gene" reverse-reference="massSpec"/>
   <reference name="publications" referenced-type="Publication" reverse-reference="massSpec" ordered="true"/>

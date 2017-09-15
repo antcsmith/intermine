@@ -1,7 +1,7 @@
 package org.intermine.bio.dataconversion;
 
 /*
- * Copyright (C) 2002-2016 FlyMine
+ * Copyright (C) 2002-2015 FlyMine
  *
  * This code may be freely distributed and modified under the
  * terms of the GNU Lesser General Public Licence.  This should
@@ -16,14 +16,12 @@ import java.io.FileReader;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.intermine.dataconversion.ItemWriter;
 import org.intermine.metadata.Model;
@@ -46,8 +44,8 @@ public class ArrayexpressAtlasConverter extends BioDirectoryConverter
     private boolean isDatasetTitleAssigned = false;
     private String datasetTitle;
     private List<String> datasets = new ArrayList<String>();
-    protected IdResolver rslv;
-    private static final String TAXON_ID = "9606";
+
+    private String taxonId = "9606";
     private static final Logger LOG = Logger.getLogger(ArrayexpressAtlasConverter.class);
 
     //String[] types = new String[] {"organism_part", "disease_state", "cell_type", "cell_line"};
@@ -61,10 +59,6 @@ public class ArrayexpressAtlasConverter extends BioDirectoryConverter
      */
     public ArrayexpressAtlasConverter(ItemWriter writer, Model model) {
         super(writer, model, DATA_SOURCE_NAME, null);
-
-        if (rslv == null) {
-            rslv = IdResolverService.getIdResolverByOrganism(Collections.singleton(TAXON_ID));
-        }
     }
 
     @Override
@@ -125,12 +119,8 @@ public class ArrayexpressAtlasConverter extends BioDirectoryConverter
                 for (int i = 0; i < expressionResults.length(); i++) {
                     JSONObject expressionResult = expressionResults.getJSONObject(i);
                     try {
-                        String geneRefId = getGeneId(ensemblId);
-                        if (StringUtils.isEmpty(geneRefId)) {
-                            continue;
-                        }
                         Item expressionItem = createItem("AtlasExpression");
-                        expressionItem.setReference("gene", geneRefId);
+                        expressionItem.setReference("gene", getGeneId(ensemblId));
                         String type = expressionResult.get("ef").toString();
                         if (!EXPRESSION_TYPES.contains(type)) {
                             continue;
@@ -167,36 +157,17 @@ public class ArrayexpressAtlasConverter extends BioDirectoryConverter
     }
 
     private String getGeneId(String primaryIdentifier) throws ObjectStoreException {
-        String resolvedIdentifier = resolveGene(primaryIdentifier);
-        if (StringUtils.isEmpty(resolvedIdentifier)) {
-            return null;
-        }
-        String geneId = genes.get(resolvedIdentifier);
+        String geneId = genes.get(primaryIdentifier);
         if (geneId == null) {
             Item gene = createItem("Gene");
-            gene.setAttribute("primaryIdentifier", resolvedIdentifier);
-            gene.setReference("organism", getOrganism(TAXON_ID));
+            gene.setAttribute("primaryIdentifier", primaryIdentifier);
+            gene.setReference("organism", getOrganism(taxonId));
+            gene.setAttribute("phenotype", "TRUE");
             store(gene);
             geneId = gene.getIdentifier();
-            genes.put(resolvedIdentifier, geneId);
+            genes.put(primaryIdentifier, geneId);
         }
         return geneId;
-    }
-
-    private String resolveGene(String identifier) {
-        String id = identifier;
-
-        if (rslv != null && rslv.hasTaxon(TAXON_ID)) {
-            int resCount = rslv.countResolutions(TAXON_ID, identifier);
-            if (resCount != 1) {
-                LOG.info("RESOLVER: failed to resolve gene to one identifier, ignoring gene: "
-                         + identifier + " count: " + resCount + " Human identifier: "
-                         + rslv.resolveId(TAXON_ID, identifier));
-                return null;
-            }
-            id = rslv.resolveId(TAXON_ID, identifier).iterator().next();
-        }
-        return id;
     }
 
     private static double round(double value, int places) {

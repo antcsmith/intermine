@@ -56,8 +56,10 @@ from the Human Protein Atlas, predictions from four mitochondrial targeting sequ
   IMPI will be updated at regular intervals to take advantage of new evidence as it becomes available. 
      The complete IMPI dataset can be downloaded at the <a href="http://www.mrc-mbu.cam.ac.uk/impi">IMPI webpage</a>.  
 <BR><BR>
-
-
+<BR><BR>
+<BR><BR>
+<BR><BR>
+<BR><BR>
 </div>
 
 <td valign="top">
@@ -71,9 +73,10 @@ from the Human Protein Atlas, predictions from four mitochondrial targeting sequ
             <span style="white-space:nowrap">
               <im:querylink text="[browse/download]" skipBuilder="true">
 
-<query name="" model="genomic" view="Gene.primaryIdentifier Gene.name Gene.symbol Gene.description Gene.chr Gene.mitoEvidenceMitoCarta Gene.mitoEvidenceIMPI Gene.mitoEvidenceGO Gene.mitoEvidenceHumanProteinAtlas Gene.MTSipsort Gene.MTSmitofates Gene.MTSmitoprot Gene.MTStargetP" longDescription="" sortOrder="Gene.symbol asc" constraintLogic="B and A">
+<query name="" model="genomic" view="Gene.primaryIdentifier Gene.name Gene.symbol Gene.description Gene.chr Gene.mitoEvidenceMitoCarta Gene.mitoEvidenceIMPI Gene.mitoEvidenceIMPIscore Gene.mitoEvidenceGO Gene.mitoEvidenceHumanProteinAtlas Gene.MTSipsort Gene.MTSmitofates Gene.MTSmitoprot Gene.MTStargetP" longDescription="" sortOrder="Gene.symbol asc" constraintLogic="B and (A or C)">
   <constraint path="Gene.organism.shortName" code="B" op="=" value="H. sapiens"/>
-  <constraint path="Gene.mitoEvidenceIMPI" code="A" op="=" value="true"/>
+  <constraint path="Gene.mitoEvidenceIMPI" code="A" op="=" value="Known mitochondrial"/>
+  <constraint path="Gene.mitoEvidenceIMPI" code="C" op="=" value="Predicted mitochondrial"/>
 </query>
               </im:querylink>
             </span>
@@ -85,9 +88,10 @@ from the Human Protein Atlas, predictions from four mitochondrial targeting sequ
             <span style="white-space:nowrap">
               <im:querylink text="[browse/download]" skipBuilder="true">
 
-<query name="" model="genomic" view="Gene.primaryIdentifier Gene.name Gene.symbol Gene.description Gene.chr Gene.mitoEvidenceMitoCarta Gene.mitoEvidenceIMPI Gene.mitoEvidenceGO Gene.mitoEvidenceHumanProteinAtlas Gene.MTSipsort Gene.MTSmitofates Gene.MTSmitoprot Gene.MTStargetP" longDescription="" sortOrder="Gene.symbol asc" constraintLogic="B and A">
+<query name="" model="genomic" view="Gene.primaryIdentifier Gene.name Gene.symbol Gene.description Gene.chr Gene.mitoEvidenceMitoCarta Gene.mitoEvidenceIMPI Gene.mitoEvidenceGO Gene.mitoEvidenceHumanProteinAtlas Gene.MTSipsort Gene.MTSmitofates Gene.MTSmitoprot Gene.MTStargetP" longDescription="" sortOrder="Gene.symbol asc" constraintLogic="B and (A or C)">
   <constraint path="Gene.organism.shortName" code="B" op="=" value="M. musculus"/>
-  <constraint path="Gene.mitoEvidenceIMPI" code="A" op="=" value="true"/>
+  <constraint path="Gene.mitoEvidenceIMPI" code="A" op="=" value="Known mitochondrial"/>
+  <constraint path="Gene.mitoEvidenceIMPI" code="C" op="=" value="Predicted mitochondrial"/>
 </query>
               </im:querylink>
             </span>
@@ -99,9 +103,10 @@ from the Human Protein Atlas, predictions from four mitochondrial targeting sequ
             <span style="white-space:nowrap">
               <im:querylink text="[browse/download]" skipBuilder="true">
 
-<query name="" model="genomic" view="Gene.primaryIdentifier Gene.name Gene.symbol Gene.description Gene.chr Gene.mitoEvidenceMitoCarta Gene.mitoEvidenceIMPI Gene.mitoEvidenceGO Gene.mitoEvidenceHumanProteinAtlas Gene.MTSipsort Gene.MTSmitofates Gene.MTSmitoprot Gene.MTStargetP" longDescription="" sortOrder="Gene.symbol asc" constraintLogic="B and A">
+<query name="" model="genomic" view="Gene.primaryIdentifier Gene.name Gene.symbol Gene.description Gene.chr Gene.mitoEvidenceMitoCarta Gene.mitoEvidenceIMPI Gene.mitoEvidenceGO Gene.mitoEvidenceHumanProteinAtlas Gene.MTSipsort Gene.MTSmitofates Gene.MTSmitoprot Gene.MTStargetP" longDescription="" sortOrder="Gene.symbol asc" constraintLogic="B and (A or C)">
   <constraint path="Gene.organism.shortName" code="B" op="=" value="R. norvegicus"/>
-  <constraint path="Gene.mitoEvidenceIMPI" code="A" op="=" value="true"/>
+  <constraint path="Gene.mitoEvidenceIMPI" code="A" op="=" value="Known mitochondrial"/>
+  <constraint path="Gene.mitoEvidenceIMPI" code="C" op="=" value="Predicted mitochondrial"/>
 </query>
               </im:querylink>
             </span>
