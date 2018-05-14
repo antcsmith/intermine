@@ -1,7 +1,7 @@
 package org.intermine.sql.writebatch;
 
 /*
- * Copyright (C) 2002-2016 FlyMine
+ * Copyright (C) 2002-2017 FlyMine
  *
  * This code may be freely distributed and modified under the
  * terms of the GNU Lesser General Public Licence.  This should
@@ -50,7 +50,6 @@ public class FlushJobPostgresCopyImpl implements FlushJob
      */
     public void flush() throws SQLException {
         try {
-            LOG.info("Before postgres copyIn data: " + data);
             copyManager.copyIn(sql, new ByteArrayInputStream(data, 0, size));
             copyManager = null;
             sql = null;

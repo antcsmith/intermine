@@ -1,7 +1,7 @@
 package org.intermine.bio.dataconversion;
 
 /*
- * Copyright (C) 2002-2016 FlyMine
+ * Copyright (C) 2002-2017 FlyMine
  *
  * This code may be freely distributed and modified under the
  * terms of the GNU Lesser General Public Licence.  This should
@@ -210,7 +210,9 @@ public class OboConverter extends DataConverter
      */
     protected void configureItem(String termId, Item item, OboTerm term)
         throws ObjectStoreException {
-        item.addAttribute(new Attribute("name", term.getName()));
+        if (term.getName() != null && term.getName().trim().length() > 0) {
+            item.addAttribute(new Attribute("name", term.getName()));
+        }
         item.addReference(new Reference("ontology", ontology.getIdentifier()));
         if (term.getId() != null) {
             item.addAttribute(new Attribute("identifier", term.getId()));

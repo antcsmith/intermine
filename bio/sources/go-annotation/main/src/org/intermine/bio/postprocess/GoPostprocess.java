@@ -1,7 +1,11 @@
 package org.intermine.bio.postprocess;
 
 /*
+<<<<<<< HEAD
  * Copyright (C) 2002-2015 FlyMine
+=======
+ * Copyright (C) 2002-2017 FlyMine
+>>>>>>> a2dae6a273d0ffeb9ab307e919ebbc8feedf255c
  *
  * This code may be freely distributed and modified under the
  * terms of the GNU Lesser General Public Licence.  This should
