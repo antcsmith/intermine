@@ -51,12 +51,12 @@
 </div>
 <!--<div class="funding-footer footer">-->
   <!-- funding -->
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
   <!--<div class="funders"><fmt:message key="funding" /><fmt:message key="credits" /></div>
 =======
   <div class="funders"><fmt:message key="funding" /></div>
   <div class="credits"><fmt:message key="credits" /></div>
->>>>>>> a2dae6a273d0ffeb9ab307e919ebbc8feedf255c
+  a2dae6a273d0ffeb9ab307e919ebbc8feedf255c
 </div>
 
 </div>-->

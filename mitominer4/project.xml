@@ -11,7 +11,7 @@
     
       <source name="uniprot" type="uniprot">
       	<property name="uniprot.organisms" value="9606 10090 10116 7955 559292 284812"/>
-        <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2017_05/"/>
+        <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2018_04/"/>
       	<property name="allowduplicates" value="false"/>
       	<property name="loadfragments" value="false"/>
       	<property name="creatego" value="false"/>   
@@ -19,7 +19,7 @@
   
      <source name="uniprot-addons" type="uniprot-addons">
         <property name="uniprot.organisms" value="10000"/>
-        <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2017_05/"/>
+        <property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2018_04/"/>
         <property name="allowduplicates" value="false"/>
         <property name="loadfragments" value="false"/>
         <property name="creatego" value="false"/>
@@ -31,14 +31,14 @@
   		<property name="fasta.classAttribute" value="primaryAccession"/>
   		<property name="fasta.dataSetTitle" value="UniProt data set"/>
   		<property name="fasta.dataSourceName" value="UniProt"/>
-  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2017_05"/>
+  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2018_04"/>
   		<property name="fasta.includes" value="uniprot_sprot_varsplic.fasta"/>
   		<property name="fasta.sequenceType" value="protein" />
   		<property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
       </source>
 
 	  <source name="uniprot-keywords" type="uniprot-keywords">
-  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2017_05"/>
+  		<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/uniprot/2018_04"/>
   		<property name="src.data.dir.includes" value="keywlist.xml"/>
 	  </source>
 
@@ -66,19 +66,20 @@
       </source>
 
       <source name="go" type="go" dump="true">
-      	<property name="src.data.file" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2017-08-10/gene_ontology.obo"/>
+      	<property name="src.data.file" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2018-05-15/gene_ontology.obo"/>
       </source>
     
       <source name="go-annotation" type="go-annotation">
-      	<property name="ontologyfile" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2017-08-10/gene_ontology.obo"/>
-      	<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2017-08-10/uniprot/"/>
+      	<property name="ontologyfile" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2018-05-15/gene_ontology.obo"/>
+      	<property name="src.data.dir" location="/zeta/data/datasets/mitominer/mitominer4/go-annotation/2018-05-15/uniprot/"/>
         <property name="src.data.dir.includes" value="**/gene_association*"/> 
       	<property name="ontologyPrefix" value="GO"/>
       </source>
 
       <source name="MTS" type="MTS" dump="false">
         <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/MTS/output_MTS.xml" />
-      </source>
+      <property name="allowduplicates" value="true"/>
+	</source>
     
       <source name="MTSgene" type="MTSgene" dump="false">
         <property name="src.data.file" location="/zeta/data/bioinf/research/mitominer4/processedData/MTS/output_MTSgene.xml" />

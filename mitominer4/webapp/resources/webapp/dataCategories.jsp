@@ -77,8 +77,8 @@
        <p><i>S. pombe</i></p>
     </td>
     <td> Gene identifiers, descriptions, information and annotation</td>
-    <td> <a href="http://www.ensembl.org" target="_new" class="extlink">Ensembl</a> - Version 89 <BR>
-    <a href="http://www.geneontology.org/" target="_new" class="extlink">Gene Ontology</a> - Version 2017-05-31</td>
+    <td> <a href="http://www.ensembl.org" target="_new" class="extlink">Ensembl</a> - Version 92 <BR>
+    <a href="http://www.geneontology.org/" target="_new" class="extlink">Gene Ontology</a> - Version 2018-05-15</td>
     <td> Kersey <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/26578574" target="_new" class="extlink">PubMed: 26578574</a> <BR>
     Gene Ontology Consortium - <a href="http://www.ncbi.nlm.nih.gov/pubmed/10802651" target="_new" class="extlink">PubMed: 10802651</a></td>
   </tr>
@@ -93,8 +93,8 @@
        <p><i>S. pombe</i></p>
     </td>
     <td>Protein annotation and gene mappings</td>
-    <td> <a href="http://www.uniprot.org" target="_new" class="extlink">UniProt</a> - Release 2017_05<BR>
-         <a href="http://www.ebi.ac.uk/interpro/" target="_new" class="extlink">InterPro</a> - v63.0
+    <td> <a href="http://www.uniprot.org" target="_new" class="extlink">UniProt</a> - Release 2018_04<BR>
+         <a href="http://www.ebi.ac.uk/interpro/" target="_new" class="extlink">InterPro</a> - v68
     </td>
     <td> UniProt Consortium - <a href="http://www.ncbi.nlm.nih.gov/pubmed/17142230" target="_new" class="extlink">PubMed: 17142230</a><BR>
     Mitchell <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/25428371" target="_new" class="extlink">PubMed: 25428371</a>
@@ -115,7 +115,7 @@
        <p><i>S. pombe</i></p>
     </td>
     <td>Orthologues and paralogue relationships between these 6 organisms</td>
-    <td><a href=http://www.ensembl.org/info/docs/api/compara/index.html target="_new" class="extlink">Ensembl Compara</a> - Version 89</td>
+    <td><a href=http://www.ensembl.org/info/docs/api/compara/index.html target="_new" class="extlink">Ensembl Compara</a> - Version 92</td>
     <td>Vilella <i>et al</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/19029536 " target="_new" class="extlink">PubMed: 19029536</a></td>
     
   </tr>
@@ -159,7 +159,7 @@
        <p><i>H. sapiens</i></p>
     </td>
      <td>Immunofluorescent cell staining results</td>
-    <td> <a href="http://www.proteinatlas.org" target="_new" class="extlink">Human Protein Atlas</a> - Version 16.1</td>
+    <td> <a href="http://www.proteinatlas.org" target="_new" class="extlink">Human Protein Atlas</a> - Version 18</td>
     <td> Uhlen <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/21139605" target="_new" class="extlink">PubMed: 21139605</a></td>
     </td>
   </tr>
@@ -193,7 +193,7 @@
         <p><i>R. norvegicus</i></p>
     </td>
     <td>Integrated Mitochondrial Protein Index (IMPI) </td>
-    <td> <a href="/${WEB_PROPERTIES['webapp.path']}/impi.do" target="_new" class="extlink">IMPI</a> - Version Q3 2017 </td>
+    <td> <a href="/${WEB_PROPERTIES['webapp.path']}/impi.do" target="_new" class="extlink">IMPI</a> - Version Q2 2018 </td>
     <td> Manuscript in preparation </td>
   </tr>
   <tr>
@@ -212,7 +212,7 @@
     <td rowspan="3" class="leftcol"><p> <h2>Phenotypes</h2></p></td>
     <td> <p><i>M. musculus</i></p> </td>
     <td> Mammalian phenotypes of spontaneous, induced and engineered mutations</td>
-    <td> <a href="http://www.informatics.jax.org/phenotypes.shtml" target="_new" class="extlink">MGI</a> - 30th June 2017</td>
+    <td> <a href="http://www.informatics.jax.org/phenotypes.shtml" target="_new" class="extlink">MGI</a> - 13th June 2018</td>
     <td> Blake <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/24285300" target="_new" class="extlink">PubMed: 24285300</a></td>
     
   </tr>
@@ -220,7 +220,7 @@
    <tr>
     <td> <p><i>D. rerio</i></p> </td>
     <td> Zebrafish knockdown and mutant information</td>
-    <td> <a href="http://zfin.org" target="_new" class="extlink"> ZFIN </a> - 28th June 2017</td>
+    <td> <a href="http://zfin.org" target="_new" class="extlink"> ZFIN </a> - 12th June 2018</td>
     <td> Bradford <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/21036866" target="_new" class="extlink">PubMed: 21036866</a></td>
     
   </tr>
@@ -228,7 +228,7 @@
   <tr>
     <td><p><i>S. cerevisiae</i></p></td>
     <td> Yeast mutant information</td>
-    <td> <a href="http://www.yeastgenome.org" target="_new" class="extlink"> SGD </a> - 28th June 2017</td>
+    <td> <a href="http://www.yeastgenome.org" target="_new" class="extlink"> SGD </a> - 14th January 2017</td>
     <td> Engel <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/19906697" target="_new" class="extlink">PubMed: 19906697</a></td>
     
   </tr>
@@ -237,9 +237,9 @@
     <td rowspan="1" class="leftcol"><p><h2>Diseases</h2></p></td>
     <td> <p><i>H. sapiens</i></p> </td>
     <td> Human disease information</td>
-    <td> <a href="http://omim.org" target="_new" class="extlink">OMIM</a> - Last updated 28th June 2017 <BR>
+    <td> <a href="http://omim.org" target="_new" class="extlink">OMIM</a> - Last updated 13th June 2018 <BR>
     <a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-62/" target="_new" class="extlink">ArrayExpress Atlas</a> - June 2011 <BR>
-    <a href="http://neuromuscular.wustl.edu" target="_new" class="extlink">WashU Neuromuscular Disease Center</a> - Last updated July 2017
+    <a href="http://neuromuscular.wustl.edu" target="_new" class="extlink">WashU Neuromuscular Disease Center</a> - Last updated June 2018
     </td>
     <td> Amberger <i>et al.</i>  - <a href="http://www.ncbi.nlm.nih.gov/pubmed/18842627" target="_new" class="extlink">PubMed: 18842627</a>
          Petryszak <i>et al. </i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/24304889" target="_new" class="extlink">PubMed: 24304889</a>
@@ -254,7 +254,7 @@
        <p><i>H. sapiens</i></p>
     </td>
     <td> Antibody staining results from 47 normal and 20 cancer tissue types </td>
-    <td> <a href="http://www.proteinatlas.org" target="_new" class="extlink">Human Protein Atlas</a> - Version 16.1</td>
+    <td> <a href="http://www.proteinatlas.org" target="_new" class="extlink">Human Protein Atlas</a> - Version 18</td>
     <td> Uhlen <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/21139605" target="_new" class="extlink">PubMed: 21139605</a></td>
     </tr>
   <tr>
@@ -277,7 +277,7 @@
         <p><i>S. pombe</i></p>
     </td>
     <td> Pathway, reaction and metabolite information and the genes involved</td>
-    <td> <a href="http://www.genome.jp/kegg/" target="_new" class="extlink">KEGG</a> - June 2017</td>
+    <td> <a href="http://www.genome.jp/kegg/" target="_new" class="extlink">KEGG</a> - May 2018</td>
     <td> Kanehisa <i>et al.</i> - <a href="http://www.ncbi.nlm.nih.gov/pubmed/16381885" target="_new" class="extlink">PubMed: 16381885</a></td>
     
   </tr>

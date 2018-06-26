@@ -108,7 +108,7 @@
               <h2>New to version 4.0?</h2>
               <p>Welcome to <strong>MitoMiner</strong>, an integrated web resource of mitochondrial localisation evidence and phenotype data for mammals, zebrafish and yeasts.</p>
               <BR>
-              <p> MitoMiner is now <strong>gene centric</strong>, with all data attached to gene objects, however the old protein centric version can be found <a href="http://mitominer.mrc-mbu.cam.ac.uk/release-3.1/begin.do">here</a>.</p>
+              <p> MitoMiner is now <strong>gene centric</strong>, with all data attached to gene objects. For best results search for a gene identifier such as an Ensembl id, gene symbol or genome project id (HGNC, MGI, RGD, SGD, ZFIN).</p>
               <BR>
               <p>If you are short of time, just navigate through our set of <a class="nice" href="#" onclick="switchBochs(2);return false;">Feature Hints</a>. For a more detailed description on how to use the site and its features try the 
                <a class="nice" href="<c:url value="http://mitominer.mrc-mbu.cam.ac.uk/support/tutorials" />"
@@ -535,10 +535,10 @@
             these gene lists in the queries above or use the links below to query these datasets directly.</p>
             <BR>
             <div id= "lists">
-            <p> <a href="mitocarta.do"><strong>MitoCarta 2.0 </strong></a> - an inventory of 1158 human and mouse genes encoding proteins with strong support</p>
+            <p> <a href="mitocarta.do"><strong>MitoCarta 2.0 </strong></a> - an inventory of 1157 human and mouse genes encoding proteins with strong support</p>
             <p>of mitochondrial localisation. <a href="mitocarta.do">Read about and query MitoCarta 2.0 here</a></p>
             <BR>
-            <p> <a href="impi.do"><strong>IMPI (version Q3 2017)</strong></a>- Integrated Mitochondrial Protein Index of 1550 mammalian genes (1130 known and 420 predicted from experimental</p> 
+            <p> <a href="impi.do"><strong>IMPI (version Q2 2018)</strong></a>- Integrated Mitochondrial Protein Index of 1626 mammalian genes (1184 known and 442 predicted from experimental</p> 
             <p> data) encoding proteins that are associated with the mitochondrion. <a href="impi.do">Read about and query IMPI here</a></p>
           <BR>
           <BR>
